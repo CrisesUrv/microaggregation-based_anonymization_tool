@@ -77,7 +77,7 @@ public class Test {
 	
 	private static void printUsage(){
 		System.out.println("Usage example: ");
-		System.out.println("java -jar anonymize nameDataset.csv nameConfigFile.xml");
+		System.out.println("java -jar dat.jar nameDataset.csv nameConfigFile.xml");
 	}
 
 	private static String getNameAnonymizedDataset(String datasetLocation) {
