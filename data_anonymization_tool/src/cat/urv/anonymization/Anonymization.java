@@ -350,7 +350,7 @@ public class Anonymization {
 				RecordQ.getListDataTypes().add(Record.getListDataTypes().get(i));
 			}
 		}
-		for(Record reg:dataOri){	//crea records con solo los quasi + 1 sensible
+		for(Record reg:dataOri){	//create records with only quasi-identifiers + 1 sensitive attribute
 			dataQuasis.add(reg.toRecordQConfidential());
 		}
 		
