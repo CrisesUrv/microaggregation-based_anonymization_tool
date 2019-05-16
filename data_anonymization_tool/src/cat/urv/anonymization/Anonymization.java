@@ -33,7 +33,7 @@ public class Anonymization {
      * Called to anonymize the original dataset
      * The adequate anonymization algorithm is applied
      *
-     * @param k: level of k-anonymity
+     * @param k:: level of k-anonymity
 	 * @throws InvalidValueException
 	 * @throws QuasiNotFoundException
 	 * @throws InvalidConfidentialAttributeException
