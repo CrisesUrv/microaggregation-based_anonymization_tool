@@ -1,15 +1,15 @@
-# Data Anonymization Tool
+# ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\huge&space;\mu\textbf{ANT})
 
-Data Anonymization Tool (DAT) is a tool to protect datasets applying microaggregation algorithms in order to fulfill k-anonymity or k-anonymity and t-closeness. In the same process, DAT assess the utility of the anonymized datasets.
+Microaggregation-based Anonymization Tool (![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT})) is a tool to protect datasets applying microaggregation algorithms in order to fulfill k-anonymity or k-anonymity and t-closeness. In the same process, ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) assess the utility of the anonymized datasets.
 This tool has been developed by researchers of the CRISES group of the Universitat Rovira i Virgili in Tarragona (Catalonia, Spain).
 
 ## Getting Started
 
-The DAT application takes as input:
+The ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) application takes as input:
 * The dataset to be anonymized
 * A configuration file describing the dataset and setting the protection method
 
-As result, the tool outputs an anonymized version of the dataset showing several metrics assessing its utility.
+As result, the tool will output an anonymized version of the dataset showing several metrics assessing its utility.
 
 The application is executed via command line and it runs in Windows, Linux and Mac OS X.
 
@@ -37,10 +37,10 @@ The computer in which the software prototype will run should fulfill the followi
 * Java (RE or DK) environment v8 must be installed (or, alternatively, OpenJDK 8). Java 8 can be downloaded from: https://www.java.com/en/download/
 * At least 4 GB of RAM memory. The RAM available for the application should be set in the execution command (see below).
 
-To install the Data Anonymization Tool just copy the dat.jar file provided inside the folder "jar" in a folder in the computer hard disk. It is recommended to copy in the same folder the dataset to be anonymized and the XML configuration file for that dataset.      
+To install the Microaggregation-based Anonymization Tool just copy the dat.jar file provided inside the folder "jar" in a folder in the computer hard disk. It is recommended to copy in the same folder the dataset to be anonymized and the XML configuration file for that dataset.      
 
 ### Running
-To run tha Data Anonymization Tool, access the folder where the dat.jar file has been copied and execute the following sentence from the console:
+To run the Microaggregation-based Anonymization Tool, access the folder where the dat.jar file has been copied and execute the following sentence from the console:
 ```
 java -jar -Xmx1024m -Xms1024m dat.jar dataset_name configuration_file_name
 ```
