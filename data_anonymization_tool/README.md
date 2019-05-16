@@ -5,7 +5,7 @@ This tool has been developed by researchers of the CRISES group of the Universit
 
 ## Getting Started
 
-The ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) application takes as input:
+The ![equation](http://latex.codecogs.com/gif.latex?\inline&space;\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) application takes as input:
 * The dataset to be anonymized
 * A configuration file describing the dataset and setting the protection method
 
