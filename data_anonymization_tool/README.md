@@ -9,7 +9,7 @@ The ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space
 * The dataset to be anonymized
 * A configuration file describing the dataset and setting the protection method
 
-As result, the tool outputs an anonymized version of the dataset showing several metrics assessing its utility.
+As result, the tool will output an anonymized version of the dataset showing several metrics assessing its utility.
 
 The application is executed via command line and it runs in Windows, Linux and Mac OS X.
 
