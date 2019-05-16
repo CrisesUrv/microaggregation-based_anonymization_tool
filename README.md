@@ -23,12 +23,14 @@ The application is executed via command line and it runs in Windows, Linux and M
 * The protection configuration paramenters: they are stored in the configuration XML file described in the previous point and they specify the following properties for each attribute type:
   * type: the attribute_type described above (identifier, quasi-identifier, confidential, non-confidential)
   * protection: the method used to anonymize the attributes defined by its attribute type:
-    * supression: supress the value (specifically, changes the value by an '\*'. Used to protect identifier attributes
+    * supression: supress the value (specifically, changes the value by an '\*'). Used to protect identifier attributes
     * k-anonymity: apply microaggregation k-anonymity method. Used to protect quasi-identifier attributes
       * k: the desired k value for the k-anonymity method
     * t-closeness: apply t-closeness method. Used to protect confidential attributes
       * t: the desired t value for the t-closeness method
     * not: the attribute is not protected remanining original. Used in non-confidential attributes
+
+Inside the folder "datasets" it is stored some configuration files in XML format describing and setting the example dataset.
 
 ### Installing
 The computer in which the software prototype will run should fulfill the following requirements:
@@ -46,7 +48,7 @@ Where the dataset_name corresponds to the name of the dataset to be anonymized a
 
 The Xmx and Xms parameters specify the amount of memory that will be available for the application, in function of the size of the dataset to be anonymized and the amount of RAM memory available in the system, these parameters can be modify. In this case it is reserved 1 Gb of RAM memory for the process.
 
-The resulting anonymized dataset will be stored in the same directory, with the same name of the original dataset but adding \_anom to the original name. In addition, several metrics assessing the utility of the anonymized dataset will be shown in the console.
+The resulting anonymized dataset will be stored in the same directory, with the same name of the original dataset but adding "\_anom" to the original name. In addition, several metrics assessing the utility of the anonymized dataset will be shown in the console.
 
 ### Examples
 
@@ -55,14 +57,14 @@ Taking the sample dataset and configuration files stored inside the folder "data
 To anonymize the dataset applying in quasi-identifiers attributes microaggreation based k-anonymity with k = 3, execute the follow command in the console (the xml file determines the protection method for the attribute type):
 
 ```
-java -jar -Xmx1024m -Xms1024m ./dat.jar ./data_example.txt ./properties1.xml
+java -jar -Xmx1024m -Xms1024m dat.jar data_example.txt properties1.xml
 ```
 As result, it is generated an anonymized dataset named "dataset_example_anom.txt" in the same directory.
 
 To anonymize the dataset applying in quasi-identifiers attributes microaggreation based k-anonymity with k = 3 and applying in confidential attributes microaggreation based t-closeness with t = 0.25, execute the follow command in the console (the xml file determines the protection method for the attribute type):
 
 ```
-java -jar -Xmx1024m -Xms1024m ./dat.jar ./data_example.txt ./properties2.xml
+java -jar -Xmx1024m -Xms1024m dat.jar data_example.txt properties2.xml
 ```
 As result, it is generated an anonymized dataset named "dataset_example_anom.txt" in the same directory, if the file exists in the folder, it is replaced by the new one.
 
