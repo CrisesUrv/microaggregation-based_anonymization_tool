@@ -3,8 +3,10 @@ package cat.urv.entities;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 
 import cat.urv.utils.Constants;
+import cat.urv.utils.OWLOntologyAccess;
 
 /**
  * Class that represents a RecordQ
@@ -14,8 +16,10 @@ import cat.urv.utils.Constants;
  */
 public class RecordQ {
 	static int numAttr;
+	static ArrayList<String>listNames;
 	static ArrayList<String>listDataTypes;
 	static ArrayList<String>listAttrTypes;
+	static HashMap<String,OWLOntologyAccess>ontologies;
 	String attrValues[];
 	int id;
 	
@@ -81,8 +85,24 @@ public class RecordQ {
 		return listAttrTypes;
 	}
 
+	public static ArrayList<String> getListNames() {
+		return listNames;
+	}
+
+	public static void setListNames(ArrayList<String> listNames) {
+		RecordQ.listNames = listNames;
+	}
+
 	public static void setListAttrTypes(ArrayList<String> listAttrTypes) {
 		RecordQ.listAttrTypes = listAttrTypes;
+	}
+
+	public static HashMap<String, OWLOntologyAccess> getOntologies() {
+		return ontologies;
+	}
+
+	public static void setOntologies(HashMap<String, OWLOntologyAccess> ontologies) {
+		RecordQ.ontologies = ontologies;
 	}
 
 	public String[] getAttrValues() {

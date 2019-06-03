@@ -7,10 +7,11 @@ import cat.urv.entities.Record;
 import cat.urv.exception.AttributeNameNotFoundException;
 import cat.urv.exception.DatasetNotFoundException;
 import cat.urv.exception.InvalidAttributeTypeException;
-import cat.urv.exception.InvalidCSVFormatFound;
+import cat.urv.exception.InvalidCSVFormatFoundException;
 import cat.urv.exception.InvalidConfidentialAttributeException;
 import cat.urv.exception.InvalidDataTypeException;
 import cat.urv.exception.InvalidProtectionException;
+import cat.urv.exception.NoOntologyInSemanticDataTypeException;
 import cat.urv.exception.NullValueException;
 import cat.urv.exception.XmlNotFoundException;
 import cat.urv.utils.Constants;
@@ -36,17 +37,19 @@ public class AnonymizationConfig {
 	 * @throws DatasetNotFoundException 
 	 * @throws XmlNotFoundException 
 	 * @throws AttributeNameNotFoundException 
-	 * @throws InvalidCSVFormatFound 
+	 * @throws InvalidCSVFormatFoundException 
 	 * @throws NullValueException 
 	 * @throws InvalidAttributeTypeException 
 	 * @throws InvalidDataTypeException 
 	 * @throws InvalidProtectionException 
 	 * @throws InvalidConfidentialAttributeException 
+	 * @throws NoOntologyInSemanticDataTypeException 
      */
 	public AnonymizationConfig(String xmlLocation, String datasetLocation) 
 		   throws DatasetNotFoundException, XmlNotFoundException,AttributeNameNotFoundException,
-		   		  InvalidCSVFormatFound, NullValueException, InvalidAttributeTypeException, 
-		   		  InvalidDataTypeException, InvalidProtectionException, InvalidConfidentialAttributeException{
+		   		  InvalidCSVFormatFoundException, NullValueException, InvalidAttributeTypeException, 
+		   		  InvalidDataTypeException, InvalidProtectionException, InvalidConfidentialAttributeException,
+		   		  NoOntologyInSemanticDataTypeException{
 		loadDataset(datasetLocation);
 		loadMetadataFromXML(xmlLocation);
 		checkAttributesInXml();
@@ -59,11 +62,11 @@ public class AnonymizationConfig {
      * @param datasetLocation: location of the dataset
      * @param separator: attribute separator
 	 * @throws DatasetNotFoundException 
-	 * @throws InvalidCSVFormatFound 
+	 * @throws InvalidCSVFormatFoundException 
 	 * @throws NullValueException 
      */
 	private void loadDataset(String datasetLocation) 
-			throws DatasetNotFoundException, InvalidCSVFormatFound, NullValueException{
+			throws DatasetNotFoundException, InvalidCSVFormatFoundException, NullValueException{
 		DatasetParser datasetParser;
 		File file;
 		
@@ -83,10 +86,12 @@ public class AnonymizationConfig {
 	 * @throws InvalidDataTypeException 
 	 * @throws InvalidProtectionException 
 	 * @throws InvalidConfidentialAttributeException 
+	 * @throws NoOntologyInSemanticDataTypeException 
      */
 	private void loadMetadataFromXML(String xmlLocation) 
 			throws XmlNotFoundException, InvalidAttributeTypeException, 
-			       InvalidDataTypeException, InvalidProtectionException, InvalidConfidentialAttributeException{
+			       InvalidDataTypeException, InvalidProtectionException, InvalidConfidentialAttributeException,
+			       NoOntologyInSemanticDataTypeException{
 		
 		XmlReader.loadXmlFile(xmlLocation);
 	}

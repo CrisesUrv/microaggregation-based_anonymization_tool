@@ -57,10 +57,10 @@ public class InformationLossResult {
 		s = "\n";
 		s += "SSE: " + SSE + "\n";
 		for(int i=0; i<originalVariance.length; i++){
-			s += "Variance original dataset attribute " + i + ": " + originalVariance[i] + "\n";
 			s += "Mean original dataset attribute " + i + ": " + originalMean[i] + "\n";
-			s += "Variance anonymized dataset attribute " + i + ": " + anonymizedVariance[i] + "\n";
+			s += "Variance original dataset attribute " + i + ": " + originalVariance[i] + "\n";
 			s += "Mean anonymized dataset attribute " + i + ": " + anonymizedMean[i] + "\n";
+			s += "Variance anonymized dataset attribute " + i + ": " + anonymizedVariance[i] + "\n";
 		}
 		
 		return s;

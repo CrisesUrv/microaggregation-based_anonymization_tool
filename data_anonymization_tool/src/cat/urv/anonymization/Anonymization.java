@@ -245,11 +245,13 @@ public class Anonymization {
 		RecordQ.setNumAttr(Record.getNumQuasi());
 		RecordQ.setListAttrTypes(new ArrayList<String>());
 		RecordQ.setListDataTypes(new ArrayList<String>());
+		RecordQ.setListNames(new ArrayList<String>());
 		for(int i=0; i<Record.getNumAttr(); i++){
 			attrType = Record.getListAttrTypes().get(i);
 			if(attrType.equalsIgnoreCase(Constants.quasiIdentifier)){
 				RecordQ.getListAttrTypes().add(Record.getListAttrTypes().get(i));
 				RecordQ.getListDataTypes().add(Record.getListDataTypes().get(i));
+				RecordQ.getListNames().add(Record.getListNames().get(i));
 			}
 		}
 		for(Record reg:dataOri){	//create records with quasi-identifiers
@@ -331,11 +333,13 @@ public class Anonymization {
 		RecordQ.setNumAttr(Record.getNumQuasi() + 1);
 		RecordQ.setListAttrTypes(new ArrayList<String>());
 		RecordQ.setListDataTypes(new ArrayList<String>());
+		RecordQ.setListNames(new ArrayList<String>());
 		for(int i=0; i<Record.getNumAttr(); i++){
 			attrType = Record.getListAttrTypes().get(i);
 			if(attrType.equalsIgnoreCase(Constants.quasiIdentifier)){
 				RecordQ.getListAttrTypes().add(Record.getListAttrTypes().get(i));
 				RecordQ.getListDataTypes().add(Record.getListDataTypes().get(i));
+				RecordQ.getListNames().add(Record.getListNames().get(i));
 			}
 		}
 		count = 0;
@@ -348,6 +352,7 @@ public class Anonymization {
         		}
 				RecordQ.getListAttrTypes().add(Record.getListAttrTypes().get(i));
 				RecordQ.getListDataTypes().add(Record.getListDataTypes().get(i));
+				RecordQ.getListNames().add(Record.getListNames().get(i));
 			}
 		}
 		for(Record reg:dataOri){	//create records with only quasi-identifiers + 1 sensitive attribute

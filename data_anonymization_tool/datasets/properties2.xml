@@ -44,6 +44,10 @@ of the attribute. The possibles data type values are:
 	- numeric_continuous: decimal numbers
 	- date: date in format yyyy/mm/dd
 	- categoric: textual values
+	- semantic: semantic nominal values
+In the case of the semantic nominal data type, it is necessary to indicate
+the location of the ontology that models the semantic nominal values
+(As example, see properties1Snomed.xml or properties2Snomed.xml)
 	-->
 	
 <schema>

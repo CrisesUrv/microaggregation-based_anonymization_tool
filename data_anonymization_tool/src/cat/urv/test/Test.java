@@ -7,11 +7,12 @@ import cat.urv.entities.InformationLossResult;
 import cat.urv.exception.AttributeNameNotFoundException;
 import cat.urv.exception.DatasetNotFoundException;
 import cat.urv.exception.InvalidAttributeTypeException;
-import cat.urv.exception.InvalidCSVFormatFound;
+import cat.urv.exception.InvalidCSVFormatFoundException;
 import cat.urv.exception.InvalidConfidentialAttributeException;
 import cat.urv.exception.InvalidDataTypeException;
 import cat.urv.exception.InvalidProtectionException;
 import cat.urv.exception.InvalidValueException;
+import cat.urv.exception.NoOntologyInSemanticDataTypeException;
 import cat.urv.exception.NullValueException;
 import cat.urv.exception.QuasiNotFoundException;
 import cat.urv.exception.XmlNotFoundException;
@@ -52,7 +53,7 @@ public class Test {
 			printUsage();
 		} catch (AttributeNameNotFoundException e) {
 			System.out.println("Error: Attribute in xml not found in the dataset: " + e.getElement());
-		} catch (InvalidCSVFormatFound e) {
+		} catch (InvalidCSVFormatFoundException e) {
 			System.out.println("Error in the number of attributes in the record at the row: " + e.getRowNumber());
 		} catch (InvalidValueException e) {
 			System.out.println("Error: wrong data type in value: " + e.getParameter());
@@ -69,6 +70,8 @@ public class Test {
 			System.out.println("Error: QuasiIdentifier attribute not found");
 		} catch (InvalidConfidentialAttributeException e) {
 			System.out.println("Error: Only 1 confidential attribute is allowed in t-closeness anonymization");
+		} catch (NoOntologyInSemanticDataTypeException e) {
+			System.out.println("Error: No ontology indicated in semantic data type: " + e.getParameter());
 		}
 		
 		

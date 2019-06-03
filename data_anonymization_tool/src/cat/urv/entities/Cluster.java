@@ -58,9 +58,10 @@ public class Cluster {
      * @return a record that is the centroid of this cluster of records
      */
 	public void calculateCentroid() throws InvalidValueException{
-		long media;
-		String moda;
+		long mean;
+		String mode;
 		String dataType, attrType;
+		String semanticCentroid;
 		
 		
 		centroid = new RecordQ(0);
@@ -70,84 +71,123 @@ public class Cluster {
 				dataType = RecordQ.listDataTypes.get(i);
 				if(dataType.equalsIgnoreCase(Constants.numericDiscrete) ||
 				   dataType.equalsIgnoreCase(Constants.date)){
-					media = calculateMedia(i);
-					centroid.attrValues[i] = String.valueOf(media);
+					mean = calculateMean(i);
+					centroid.attrValues[i] = String.valueOf(mean);
 				}
 				else{
 					if(dataType.equalsIgnoreCase(Constants.numericContinuous)){
-						media = calculateMediaDouble(i);
-						centroid.attrValues[i] = String.valueOf(media);
+						mean = calculateMeanDouble(i);
+						centroid.attrValues[i] = String.valueOf(mean);
 					}
 					else{
-						moda = calculateModa(i);
-						centroid.attrValues[i] = moda;
+						mode = calculateMode(i);
+						centroid.attrValues[i] = mode;
+//						if(dataType.equalsIgnoreCase(Constants.semantic)){
+//							semanticCentroid = calculateSemanticCentroid(i);
+//							centroid.attrValues[i] = semanticCentroid;
+//						}
+//						else{
+//							mode = calculateMode(i);
+//							centroid.attrValues[i] = mode;
+//						}
 					}
 				}
 			}
 		}
 	}
 	
-	private long calculateMedia(int attr) throws InvalidValueException{
-		long media;
-		String valor = null;
+	private long calculateMean(int attr) throws InvalidValueException{
+		long mean;
+		String value = null;
 		
 		try {
-			media = 0;
+			mean = 0;
 			for(RecordQ reg:elements){
-				valor = reg.attrValues[attr];
-				media += Long.parseLong(valor);
+				value = reg.attrValues[attr];
+				mean += Long.parseLong(value);
 			}
-			media /= elements.size();
+			mean /= elements.size();
 		} catch (NumberFormatException e) {
-			throw new InvalidValueException(valor);
+			throw new InvalidValueException(value);
 		}
 		
-		return media;
+		return mean;
 	}
 	
-	private long calculateMediaDouble(int attr) throws InvalidValueException{
-		double media;
-		String valor = null;
+	private long calculateMeanDouble(int attr) throws InvalidValueException{
+		double mean;
+		String value = null;
 		
 		try {
-			media = 0;
+			mean = 0;
 			for(RecordQ reg:elements){
-				valor = reg.attrValues[attr];
-				media += Long.parseLong(valor);
+				value = reg.attrValues[attr];
+				mean += Long.parseLong(value);
 			}
-			media /= elements.size();
+			mean /= elements.size();
 		} catch (NumberFormatException e) {
-			throw new InvalidValueException(valor);
+			throw new InvalidValueException(value);
 		}
 		
-		return (long)media;
+		return (long)mean;
 	}
 	
-	private String calculateModa(int attr){
-		String moda, valor;
+	private String calculateMode(int attr){
+		String mode, value;
 		Integer v, maxV;
 		HashMap<String,Integer>control = new HashMap<String,Integer>();
 		
 		for(RecordQ reg:elements){
-			valor = reg.attrValues[attr];
-			v = control.get(valor);
+			value = reg.attrValues[attr];
+			v = control.get(value);
 			if(v == null){
-				control.put(valor, 1);
+				control.put(value, 1);
 			}
 			else{
 				v++;
-				control.put(valor, v);
+				control.put(value, v);
 			}
 		}
 		maxV = 0;
-		moda = "";
+		mode = "";
 		for(String s:control.keySet()){
 			v = control.get(s);
 			if(v > maxV){
-				moda = s;
+				mode = s;
 				maxV = v;
 			}
 		}
-		return moda;
+		return mode;
+	}
+	
+	private String calculateSemanticCentroid(int attr){
+		String semanticCentroid = null;
+		String attrName, value, lcs;
+		ArrayList<String>values, candidates;
+		double minSumDist, sumDist;
+		
+		values = new ArrayList<String>();
+		for(RecordQ reg:elements){
+			value = reg.attrValues[attr];
+			values.add(value);
+		}
+		attrName = RecordQ.listNames.get(attr);
+		lcs = RecordQ.ontologies.get(attrName).getLCS(values);
+		
+		candidates = RecordQ.ontologies.get(attrName).getSubClasses(lcs);
+		
+		minSumDist = Double.MAX_VALUE;
+		for(String candidate:candidates){
+			sumDist = 0;
+			for(String v:values){
+				sumDist += RecordQ.ontologies.get(attrName).distance(candidate, v);
+			}
+			if(sumDist < minSumDist){
+				minSumDist = sumDist;
+				semanticCentroid = candidate;
+			}
+		}
+		
+		return semanticCentroid;
 	}
 }

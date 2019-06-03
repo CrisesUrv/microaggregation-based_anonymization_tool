@@ -16,6 +16,8 @@ public class Constants {
 	final static public String numericContinuous = "numeric_continuous";
 	final static public String categoricOrdinal = "categoric_ordinal";
 	final static public String categoric = "categoric";
+	final static public String semantic = "semantic";
+	final static public String ontology = "ontology";
 	final static public String date = "date";
 	final static public String type = "type";
 	final static public String protection = "protection";
@@ -37,5 +39,6 @@ public class Constants {
 	final static public int kValueError = -1;
 	final static public int k_anonymity = 1;
 	final static public int t_Closeness = 2;
-	static final String dateFormat = "yyy/MM/dd";
+	final static public String dateFormat = "yyy/MM/dd";
+	final static public String alphabetic = "alphabetic";
 }

@@ -9,7 +9,7 @@ public class ComparatorQuasi implements Comparator<RecordQ>{
 	static RecordQ zero;
 	
 	public static void setAttributeSortCriteria(RecordQ record){
-		String dataType, attrType;
+		String dataType, attrType, name;
 		
 		zero = new RecordQ(0);
 		for(int i=0; i<RecordQ.getNumAttr(); i++){
@@ -23,6 +23,10 @@ public class ComparatorQuasi implements Comparator<RecordQ>{
 				}
 				if(dataType.equalsIgnoreCase(Constants.categoric) || dataType.equalsIgnoreCase(Constants.categoricOrdinal)){
 					zero.getAttrValues()[i] = record.getAttrValues()[i];
+				}
+				if(dataType.equalsIgnoreCase(Constants.semantic)){
+					name = RecordQ.getListNames().get(i);
+					zero.getAttrValues()[i] = RecordQ.getOntologies().get(name).getRoot();
 				}
 			}
 		}

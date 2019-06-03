@@ -16,7 +16,7 @@ public class Distances {
 	
 	public static double euclideanDistNorm(RecordQ c1, RecordQ c2){
 		double dis, partial, partial1, cn1, cn2;
-		String attrType, dataType;
+		String attrType, dataType, name;
 				
 		dis = 0;
 		partial = partial1 = 0;
@@ -40,6 +40,10 @@ public class Distances {
 					}
 					//partial /= typicalDev[i];
 				}
+				if(dataType.equalsIgnoreCase(Constants.semantic)){
+					name = RecordQ.getListNames().get(i);
+					partial1 = RecordQ.getOntologies().get(name).distance(c1.getAttrValues()[i], c2.getAttrValues()[i]);
+				}
 				partial += (partial1 * partial1);
 			}
 		}
@@ -49,7 +53,7 @@ public class Distances {
 	
 	public static double euclideanDistNorm(String c1[], String c2[]){
 		double dis, partial, partial1, cn1, cn2;
-		String attrType, dataType;
+		String attrType, dataType, name;
 		int numAttr;
 				
 		dis = 0;
@@ -78,11 +82,48 @@ public class Distances {
 						partial = 1.0;
 					}
 				}
+				if(dataType.equalsIgnoreCase(Constants.semantic)){
+					name = Record.getListNames().get(i);
+					partial1 = RecordQ.getOntologies().get(name).distance(c1[i], c2[i]);
+				}
 				partial += (partial1 * partial1);
 			}
 		}
 		dis /= numAttr;
 		dis = Math.sqrt(partial);
+		return dis;
+	}
+	
+	public static double distance(String c1, String c2, int attr){
+		double dis, cn1, cn2;
+		String dataType, name;
+
+		dis = 0;
+		cn1 = cn2 = 0;
+		dataType = Record.getListDataTypes().get(attr);
+		if(dataType.equalsIgnoreCase(Constants.numericDiscrete) || 
+		   dataType.equalsIgnoreCase(Constants.numericContinuous)){
+			cn1 = Double.parseDouble(c1);
+			cn2 = Double.parseDouble(c2);
+		}
+		if(dataType.equalsIgnoreCase(Constants.date)){
+			cn1 = getLongFromStringDate(c1);
+			cn2 = getLongFromStringDate(c2);
+		}
+		dis = cn1-cn2;
+		if(dataType.equalsIgnoreCase(Constants.categoric)){
+			if(c1.equalsIgnoreCase(c2)){
+				dis = 0.0;
+			}
+			else{
+				dis = 1.0;
+			}
+		}
+		if(dataType.equalsIgnoreCase(Constants.semantic)){
+			name = RecordQ.getListNames().get(attr);
+			dis = RecordQ.getOntologies().get(name).distance(c1, c2);
+		}
+		
 		return dis;
 	}
 	
