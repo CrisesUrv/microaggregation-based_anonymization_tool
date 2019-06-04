@@ -336,16 +336,19 @@ public class OWLOntologyAccess {
 	
 	public OWLClass getLCS(String cl1, String cl2){
 		OWLClass lcs = null;
+		OWLClass parent;
 		ArrayList<OWLClass>common;
 		int depth, maxDepth;
 		
 		List<OWLClass> list1 = getSuperClasses(cl1);
+		list1.add(0, getClass(cl1));
 		List<OWLClass> list2 = getSuperClasses(cl2);
+		list2.add(0, getClass(cl2));
 		
 		common = new ArrayList<OWLClass>();
 		
 		for(OWLClass classs:list1){
-			if(list2.contains(classs)){
+			if(!classs.isOWLThing() && list2.contains(classs)){
 				common.add(classs);
 			}
 		}
@@ -353,11 +356,13 @@ public class OWLOntologyAccess {
 		maxDepth = Integer.MIN_VALUE;
 		for(OWLClass classs:common){
 			depth = 0;
-			while(!classs.isOWLThing()){
+			parent = getSuperClassesDirect(classs).get(0);
+			while(!parent.isOWLThing()){
 				depth++;
-				classs = getSuperClassesDirect(classs).get(0);
+				parent = getSuperClassesDirect(parent).get(0);
 			}
 			if(depth > maxDepth){
+				maxDepth = depth;
 				lcs = classs;
 			}
 		}
@@ -374,18 +379,13 @@ public class OWLOntologyAccess {
 		for(int i=1; i<list.size(); i++){
 			r2 = list.get(i);
 			lcs = getLCS(r1, r2);
-			if(lcs.isOWLThing()){
+			if(owlClassToString(lcs).equalsIgnoreCase(this.root)){
 				break;
 			}
 			r1 = owlClassToString(lcs);
 		}
 		
-		if(lcs.isOWLThing()){
-			return this.root;
-		}
-		else{
-			return owlClassToString(lcs);
-		}
+		return owlClassToString(lcs);
 	}
 	
 	public String getRoot(){

@@ -80,16 +80,16 @@ public class Cluster {
 						centroid.attrValues[i] = String.valueOf(mean);
 					}
 					else{
-						mode = calculateMode(i);
-						centroid.attrValues[i] = mode;
-//						if(dataType.equalsIgnoreCase(Constants.semantic)){
-//							semanticCentroid = calculateSemanticCentroid(i);
-//							centroid.attrValues[i] = semanticCentroid;
-//						}
-//						else{
-//							mode = calculateMode(i);
-//							centroid.attrValues[i] = mode;
-//						}
+//						mode = calculateMode(i);
+//						centroid.attrValues[i] = mode;
+						if(dataType.equalsIgnoreCase(Constants.semantic)){
+							semanticCentroid = calculateSemanticCentroid(i);
+							centroid.attrValues[i] = semanticCentroid;
+						}
+						else{
+							mode = calculateMode(i);
+							centroid.attrValues[i] = mode;
+						}
 					}
 				}
 			}
@@ -172,9 +172,11 @@ public class Cluster {
 			values.add(value);
 		}
 		attrName = RecordQ.listNames.get(attr);
-		lcs = RecordQ.ontologies.get(attrName).getLCS(values);
 		
-		candidates = RecordQ.ontologies.get(attrName).getSubClasses(lcs);
+//		lcs = RecordQ.ontologies.get(attrName).getLCS(values);
+//		candidates = RecordQ.ontologies.get(attrName).getSubClasses(lcs);
+		
+		candidates = values;
 		
 		minSumDist = Double.MAX_VALUE;
 		for(String candidate:candidates){

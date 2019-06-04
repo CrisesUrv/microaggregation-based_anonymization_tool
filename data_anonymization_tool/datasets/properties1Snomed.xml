@@ -94,6 +94,12 @@ in this xml configuration file example)
 			data_type="categoric">
 		</attribute>
 		<attribute
+			name="Diagnosis_IDini"
+			attribute_type="quasi_identifier"
+			data_type="semantic"
+			ontology="./ontologies/snomed-ontology.owl">
+		</attribute>
+		<attribute
 			name="Admission_date"
 			attribute_type="quasi_identifier"
 			data_type="date">
