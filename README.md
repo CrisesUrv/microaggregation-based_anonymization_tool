@@ -9,7 +9,7 @@ The ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space
 * The dataset to be anonymized
 * A configuration file describing the dataset and setting the protection method
 
-As result, the tool will output an anonymized version of the dataset showing several metrics assessing its utility.
+As result, the tool outputs an anonymized version of the dataset showing several metrics assessing its utility.
 
 The application is executed via command line and it runs in Windows, Linux and Mac OS X.
 
@@ -18,7 +18,7 @@ The application is executed via command line and it runs in Windows, Linux and M
 * The dataset configurartion parameters: they are stored as XML files, so that they can be reused for several datasets that share the shame schema. Inside the folder "datasets" several commented examples of the configuration XML file are stored. Specifically, the configuration XML file specify the following properties for each attribute:
     * name: the name of the attribute which has to match with the name of the attrbiute in the dataset header
     * attribute_type: The privacy requeriments (identifier, quasi-identifier, confidential, non-confidential), that state how attributes should be protected
-    * data_type: either numerical_discrete, numerical_continuous, date or categorical
+    * data_type: either numerical_discrete, numerical_continuous, date, categorical or semantic (In the case of semantic data type, it is necessary to indicate the location of the ontology that models the semantic values, see an example in the xml configuration files included in the 'datasets' directory)
 
 * The protection configuration paramenters: they are stored in the configuration XML file described in the previous point and they specify the following properties for each attribute type:
   * type: the attribute_type described above (identifier, quasi-identifier, confidential, non-confidential)
