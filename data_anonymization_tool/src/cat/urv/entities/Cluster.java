@@ -176,6 +176,7 @@ public class Cluster {
 //		lcs = RecordQ.ontologies.get(attrName).getLCS(values);
 //		candidates = RecordQ.ontologies.get(attrName).getSubClasses(lcs);
 		
+		//only values in the cluster are centroid candidates
 		candidates = values;
 		
 		minSumDist = Double.MAX_VALUE;
