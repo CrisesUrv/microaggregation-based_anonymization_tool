@@ -37,8 +37,14 @@ The computer in which the software prototype will run should fulfill the followi
 * Java (RE or DK) environment v8 must be installed (or, alternatively, OpenJDK 8). Java 8 can be downloaded from: https://www.java.com/en/download/
 * At least 4 GB of RAM memory. The RAM available for the application should be set in the execution command (see below).
 
-To install the Microaggregation-based Anonymization Tool just copy the dat.jar file provided inside the folder "jar" in a folder in the computer hard disk. It is recommended to copy in the same folder the dataset to be anonymized and the XML configuration file for that dataset.      
+To install the Microaggregation-based Anonymization Tool just copy the dat.jar file provided inside the folder "jar" in a folder in the computer hard disk. It is recommended to copy in the same folder the dataset to be anonymized and the XML configuration file for that dataset.
 
+### Semantic treatment of values
+The semantic treatment of values during the anonymization process consist of the consideration of the semantics of concepts in the calculation of the distance between concepts and in the calculation of the centroid of a cluster of concepts. For the semantic treatment of values (for example, medical information, as diagnosis or procedures), it is necessary to specify the location of the ontology in OWL format that models the knowledge of the domain of the attribute (see an example in the xml configuration files included in the 'datasets' directory). In the case of the example, the dataset includes medical values represented with Snomed codes. The ontology used (snomed-ontology.owl) has been generated from the Snomed CT International edition (RF2 format) released at: https://www.nlm.nih.gov/healthit/snomedct/international.html. For copyright reasons, the snomed-ontology.owl file is not included in this project. To generate the Snomed OWL ontology from the Snomed RF2 release, we used the "Snomed OWL Toolkit" from: https://github.com/IHTSDO/snomed-owl-toolkit. We have included the executable of this tool inside the "tools" directory. Once the Snomed CT RF2 file has been downloaded, the snomed ontology in OWL format is generated executing the following sentence from the console:
+```
+java -jar snomed-owl-toolkit.jar -rf2-to-owl -rf2-snapshot-archives SnomedCT_InternationalRF2.zip
+```                 
+where "SnomedCT_InternationalRF2.zip" corresponds to the file name of the RF2 Snomed CT downloaded.
 ### Running
 To run the Microaggregation-based Anonymization Tool, access the folder where the dat.jar file has been copied and execute the following sentence from the console:
 ```
