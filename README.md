@@ -42,7 +42,7 @@ To install the Microaggregation-based Anonymization Tool just copy the dat.jar f
 ### Running
 To run the Microaggregation-based Anonymization Tool, access the folder where the dat.jar file has been copied and execute the following sentence from the console:
 ```
-java -jar -Xmx1024m -Xms1024m dat.jar dataset_name configuration_file_name
+java -jar -Xmx1024m -Xms1024m mAnt.jar dataset_name configuration_file_name
 ```
 Where the dataset_name corresponds to the name of the dataset to be anonymized and configuration:file_name corresponds to the XML file containing the configuration for the dataset.
 
@@ -57,14 +57,14 @@ Taking the sample dataset and configuration files stored inside the folder "data
 To anonymize the dataset applying in quasi-identifiers attributes microaggreation based k-anonymity with k = 3, execute the follow command in the console (the xml file determines the protection method for the attribute type):
 
 ```
-java -jar -Xmx1024m -Xms1024m dat.jar data_example.txt properties1.xml
+java -jar -Xmx1024m -Xms1024m mAnt.jar data_example_snomed.txt properties1Snomed.xml
 ```
 As result, it is generated an anonymized dataset named "dataset_example_anom.txt" in the same directory.
 
 To anonymize the dataset applying in quasi-identifiers attributes microaggreation based k-anonymity with k = 3 and applying in confidential attributes microaggreation based t-closeness with t = 0.25, execute the follow command in the console (the xml file determines the protection method for the attribute type):
 
 ```
-java -jar -Xmx1024m -Xms1024m dat.jar data_example.txt properties2.xml
+java -jar -Xmx1024m -Xms1024m mAnt.jar data_example_snomed.txt properties2Snomed.xml
 ```
 As result, it is generated an anonymized dataset named "dataset_example_anom.txt" in the same directory, if the file exists in the folder, it is replaced by the new one.
 
