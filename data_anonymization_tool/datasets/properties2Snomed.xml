@@ -117,7 +117,7 @@ in this xml configuration file example)
 	</dataset>
 	
 	<!--
-Protection descritpion
+Protection description
 ======================
 Once the dataset have been described, it is necessary to indicate 
 the protection method to be applied for each attribute type.
