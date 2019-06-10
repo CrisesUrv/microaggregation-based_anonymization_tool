@@ -199,8 +199,11 @@ public class OWLOntologyAccess {
 		File ontoFile;
 		this.ontology = null;
 		
+		System.out.println("Loading ontology... " + this.ontoLocation);
 		ontoFile = new File(this.ontoLocation);
-		System.out.println("Loading ontology... " + ontoFile.getName());
+		if(!ontoFile.exists()){
+			throw new OntologyNotFoundException();
+		}
 		OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
 		this.factory = manager.getOWLDataFactory();
 		try {
