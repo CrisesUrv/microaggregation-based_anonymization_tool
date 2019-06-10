@@ -12,20 +12,20 @@ This notes describe how to fill this xml file in order to properly configure
 the anonymization process and how to configure different types of dataset 
 anonymizations.
 
-Dataset descritpion
+Dataset description
 ===================
 In this xml file it is described the dataset to be anonymized. Datasets to
 be anonymized are persistent in disk and they are loaded from standard CSV
 files. The protected dataset are also stored in CSV format.
 
 Specifically, the CSV format consist of a file where the first row 
-correspond to the header and each succesive row correspond to a data record.
+correspond to the header and each successive row correspond to a data record.
 Each record consist of one or more attribute values separated by commas.
 The header of the CSV file consist of the name of the attributes also
 separated by commas.
     
 The description of the dataset consist of the relation of the attributes
-in the dataset and, for each attrbiute, its name, its attribute type and
+in the dataset and, for each attribute, its name, its attribute type and
 its data type. Following, each parameter is described. 
 
 name: This parameter indicates the name of the attribute to be configured.
@@ -33,13 +33,13 @@ The attribute name has to match with the attribute name in the header of
 the dataset.
 attribute_type: indicates the sensitivity of the attribute. The possible
 attribute_type values are:
-	- identifier: the attribute unambiguosly identifies the subject
+	- identifier: the attribute unambiguously identifies the subject
 	- quasi-identifier: the attribute can identify the subject if it is 
 						combined with information of other attributes
 	- confidential: the attributes that contain sensitive information
 	- non confidential: the rest of attributes
 data_type: As it name indicates, This parameter inform about the data type 
-of the attribute. The possibles data type values are:
+of the attribute. The possible data type values are:
 	- numeric_discrete: natural numbers
 	- numeric_continuous: decimal numbers
 	- date: date in format yyyy/mm/dd
@@ -123,8 +123,8 @@ Once the dataset have been described, it is necessary to indicate
 the protection method to be applied for each attribute type.
 To do this, for each attribute type, it is indicated its protection.
 The possible protection values are:
-	- supression: it is applied to identifier attrbiutes. The value is 
-				  supressed
+	- suppression: it is applied to identifier attributes. The value is 
+				  suppressed
 	- k-anonymity: it is applied to quasi-identifier attributes.
 				   Also it is indicated the desired value for the k parameter.
 	- t-closeness: it is applied to the confidential attribute. Also it
