@@ -14,6 +14,7 @@ import cat.urv.exception.InvalidProtectionException;
 import cat.urv.exception.InvalidValueException;
 import cat.urv.exception.NoOntologyInSemanticDataTypeException;
 import cat.urv.exception.NullValueException;
+import cat.urv.exception.OntologyNotFoundException;
 import cat.urv.exception.QuasiNotFoundException;
 import cat.urv.exception.XmlNotFoundException;
 
@@ -72,6 +73,8 @@ public class Test {
 			System.out.println("Error: Only 1 confidential attribute is allowed in t-closeness anonymization");
 		} catch (NoOntologyInSemanticDataTypeException e) {
 			System.out.println("Error: No ontology indicated in semantic data type: " + e.getParameter());
+		} catch (OntologyNotFoundException e) {
+			System.out.println("Error: Ontology not found or wrong");
 		}
 		
 		

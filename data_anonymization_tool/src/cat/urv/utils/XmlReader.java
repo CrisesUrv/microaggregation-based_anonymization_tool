@@ -19,13 +19,15 @@ import cat.urv.exception.InvalidAttributeTypeException;
 import cat.urv.exception.InvalidDataTypeException;
 import cat.urv.exception.InvalidProtectionException;
 import cat.urv.exception.NoOntologyInSemanticDataTypeException;
+import cat.urv.exception.OntologyNotFoundException;
 import cat.urv.exception.XmlNotFoundException;
 
 public class XmlReader {
 	
 	public static byte[] loadXmlFile(String filePropertiesName) 
 			throws XmlNotFoundException, InvalidAttributeTypeException, InvalidDataTypeException,
-			       InvalidProtectionException, NoOntologyInSemanticDataTypeException{
+			       InvalidProtectionException, NoOntologyInSemanticDataTypeException,
+			       OntologyNotFoundException{
 		FileReader2 file;
 		String linea;
 		String xml;
@@ -43,7 +45,8 @@ public class XmlReader {
 	
 	public static void readProperties(String xml) 
 			throws InvalidAttributeTypeException, InvalidDataTypeException, 
-			InvalidProtectionException, XmlNotFoundException, NoOntologyInSemanticDataTypeException{
+			InvalidProtectionException, XmlNotFoundException, NoOntologyInSemanticDataTypeException,
+			OntologyNotFoundException{
 		Document document;
 		
 		document = readDocument(xml);
@@ -92,7 +95,8 @@ public class XmlReader {
 	
 	public static void readProperties(Document document) 
 			throws InvalidAttributeTypeException, InvalidDataTypeException, 
-			InvalidProtectionException, XmlNotFoundException, NoOntologyInSemanticDataTypeException{
+			InvalidProtectionException, XmlNotFoundException, NoOntologyInSemanticDataTypeException,
+			OntologyNotFoundException{
 		int numQuasis;
 		HashMap<String,String>ontologyLocations;
 		HashMap<String,OWLOntologyAccess>ontologies;

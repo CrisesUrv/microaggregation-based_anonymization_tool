@@ -18,6 +18,8 @@ import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.reasoner.structural.StructuralReasonerFactory;
 
+import cat.urv.exception.OntologyNotFoundException;
+
 /**
  * Class that represents an ontology
  * This class gives methods to access an ontology
@@ -44,7 +46,7 @@ public class OWLOntologyAccess {
      * @param attrName: The name of the attribute modeled with this ontology
 	 * @throws OntologyNotFoundException 
      */
-	public OWLOntologyAccess(String ontoLocation){
+	public OWLOntologyAccess(String ontoLocation) throws OntologyNotFoundException{
 		this.ontoLocation = ontoLocation;
 		loadOWLOntology();
 		mapDistances = new HashMap<String,Double>();
@@ -193,7 +195,7 @@ public class OWLOntologyAccess {
 		return classes.contains(cls);
 	}
 	
-	private void loadOWLOntology(){
+	private void loadOWLOntology() throws OntologyNotFoundException{
 		File ontoFile;
 		this.ontology = null;
 		
@@ -205,7 +207,7 @@ public class OWLOntologyAccess {
 			this.ontology = manager.loadOntologyFromOntologyDocument(ontoFile);
 		}
 		catch (Exception e) {
-			e.printStackTrace();
+			throw new OntologyNotFoundException();
 		}
 		this.prefix = getPrefix();
 		loadReasoner();

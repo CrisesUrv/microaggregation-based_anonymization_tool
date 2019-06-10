@@ -13,6 +13,7 @@ import cat.urv.exception.InvalidDataTypeException;
 import cat.urv.exception.InvalidProtectionException;
 import cat.urv.exception.NoOntologyInSemanticDataTypeException;
 import cat.urv.exception.NullValueException;
+import cat.urv.exception.OntologyNotFoundException;
 import cat.urv.exception.XmlNotFoundException;
 import cat.urv.utils.Constants;
 import cat.urv.utils.DatasetParser;
@@ -44,12 +45,13 @@ public class AnonymizationConfig {
 	 * @throws InvalidProtectionException 
 	 * @throws InvalidConfidentialAttributeException 
 	 * @throws NoOntologyInSemanticDataTypeException 
+	 * @throws OntologyNotFoundException 
      */
 	public AnonymizationConfig(String xmlLocation, String datasetLocation) 
 		   throws DatasetNotFoundException, XmlNotFoundException,AttributeNameNotFoundException,
 		   		  InvalidCSVFormatFoundException, NullValueException, InvalidAttributeTypeException, 
 		   		  InvalidDataTypeException, InvalidProtectionException, InvalidConfidentialAttributeException,
-		   		  NoOntologyInSemanticDataTypeException{
+		   		  NoOntologyInSemanticDataTypeException, OntologyNotFoundException{
 		loadDataset(datasetLocation);
 		loadMetadataFromXML(xmlLocation);
 		checkAttributesInXml();
@@ -87,11 +89,12 @@ public class AnonymizationConfig {
 	 * @throws InvalidProtectionException 
 	 * @throws InvalidConfidentialAttributeException 
 	 * @throws NoOntologyInSemanticDataTypeException 
+	 * @throws OntologyNotFoundException 
      */
 	private void loadMetadataFromXML(String xmlLocation) 
 			throws XmlNotFoundException, InvalidAttributeTypeException, 
 			       InvalidDataTypeException, InvalidProtectionException, InvalidConfidentialAttributeException,
-			       NoOntologyInSemanticDataTypeException{
+			       NoOntologyInSemanticDataTypeException, OntologyNotFoundException{
 		
 		XmlReader.loadXmlFile(xmlLocation);
 	}
