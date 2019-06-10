@@ -1,84 +1,81 @@
 # ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\huge&space;\mu\textbf{ANT})
 
-Microaggregation-based Anonymization Tool (![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT})) is a tool to protect datasets applying microaggregation algorithms in order to fulfill k-anonymity or k-anonymity and t-closeness. In the same process, ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) assess the utility of the anonymized datasets.
-This tool has been developed by researchers of the CRISES group of the Universitat Rovira i Virgili in Tarragona (Catalonia, Spain).
+The Microaggregation-based Anonymization Tool (![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT})) is a software that anonymizes datasets applying microaggregation algorithms to fulfill *k*-anonymity or *k*-anonymity plus *t*-closeness. ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) has been developed by researchers of the [CRISES](https://crises-deim.urv.cat/web/) group at the [Universitat Rovira i Virgili](http://www.urv.cat/en/) in Tarragona (Catalonia, Spain).
 
 ## Getting Started
 
-The ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) application takes as input:
-* The dataset to be anonymized
-* A configuration file describing the dataset and setting the protection method
+![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) takes as input:
+* The CSV dataset to be anonymized
+* An XML configuration file describing the attributes of the dataset and specifying the anonymization parameters
 
-As result, the tool outputs an anonymized version of the dataset showing several metrics assessing its utility.
+As result, the tool outputs an anonymized version of the dataset and shows several utility (Sum of Squared Error and mean and variance divergence for each attribute vs. the original dataset).
 
-The application is executed via command line and it runs in Windows, Linux and Mac OS X.
+The application can executed via command line on Windows, Linux and Mac OS X. It also provides a JAVA API, so that the anonymization algorithms it implements can be called programmatically.
 
 ### Prerequisites
-* The input dataset: the input dataset should be loaded from standard CSV files where each row corresponds to a record ant each column corresponds to an attribute. Within the CSV file, a first line (header) stating the name of the attribute is required in order to name and store attributes and associate them with their description within the configuration file. Inside the folder "datasets" it is stored an example dataset in CSV format ready to be read for the application
-* The dataset configurartion parameters: they are stored as XML files, so that they can be reused for several datasets that share the shame schema. Inside the folder "datasets" several commented examples of the configuration XML file are stored. Specifically, the configuration XML file specify the following properties for each attribute:
-    * name: the name of the attribute which has to match with the name of the attrbiute in the dataset header
-    * attribute_type: The privacy requeriments (identifier, quasi-identifier, confidential, non-confidential), that state how attributes should be protected
-    * data_type: either numerical_discrete, numerical_continuous, date, categorical or semantic (In the case of semantic data type, it is necessary to indicate the location of the ontology that models the semantic values, see an example in the xml configuration files included in the 'datasets' directory)
+* The input dataset: is a CSV file where each row corresponds to a record and each column corresponds to an attribute. Within the CSV file, a first line (header) stating the name of the attribute is required in order to map the attributes with their features in the configuration file. A sample dataset is stored in the 'datasets' folder
+* The dataset configuration parameters: are specified in an XML file, so that they can be reused for several datasets that share the same schema. Two configuration files associated to the sample dataset are stored in the 'datasets' folder. For each attribute, the following properties should be specified:
+    * name: the name of the attribute. It must match with the name of the attribute in the dataset header
+    * attribute_type: classifies the attribute as *identifier*, *quasi-identifier*, *confidential* and *non-confidential*, so that each attribute type can be subjected to a specific protection procedure
+    * data_type: either *numerical_discrete*, *numerical_continuous*, *date*, *categorical* or *semantic*, so that the appropriate operations are use to compare and transform attribute values. For semantic attributes, it is necessary to specify the location of an ontology modeling the domain of the attribute values, see an example in the XML configuration files included in the 'datasets' directory
 
-* The protection configuration paramenters: they are stored in the configuration XML file described in the previous point and they specify the following properties for each attribute type:
-  * type: the attribute_type described above (identifier, quasi-identifier, confidential, non-confidential)
-  * protection: the method used to anonymize the attributes defined by its attribute type:
-    * supression: supress the value (specifically, changes the value by an '\*'). Used to protect identifier attributes
-    * k-anonymity: apply microaggregation k-anonymity method. Used to protect quasi-identifier attributes
-      * k: the desired k value for the k-anonymity method
-    * t-closeness: apply t-closeness method. Used to protect confidential attributes
-      * t: the desired t value for the t-closeness method
-    * not: the attribute is not protected remanining original. Used in non-confidential attributes
-
-Inside the folder "datasets" it is stored some configuration files in XML format describing and setting the example dataset.
+* The protection configuration parameters: they are stored in the configuration XML file above and specify the following properties for each attribute type:
+  * type: the attribute_type described above (*identifier*, *quasi-identifier*, *confidential*, *non-confidential*)
+  * protection: the method used to anonymize the attributes defined by this attribute type:
+    * supression: supress the value (specifically, changes the value by an '\*'). Usually employed to protect identifying attributes
+    * *k*-anonymity: applies microaggregation-based *k*-anonymity. Typically used to protect quasi-identifiers and avoid identity disclosure
+      * *k*: the desired value of *k* for *k*-anonymity
+    * *t*-closeness: apply microaggregation-based *t*-closeness. This offers protection against attribute disclosure for confidential attributes
+      * *t*: the desired value of *t* for *t*-closeness
+    * not: the attribute is not protected at all. It can be used to leave non-confidential attributes untouched
 
 ### Installing
-The computer in which the software prototype will run should fulfill the following requirements:
+The computer should fulfill the following requirements:
 * Java (RE or DK) environment v8 must be installed (or, alternatively, OpenJDK 8). Java 8 can be downloaded from: https://www.java.com/en/download/
-* At least 4 GB of RAM memory. The RAM available for the application should be set in the execution command (see below).
+* At least 4 GB of RAM memory are recommended. The RAM available for the application should be set in the execution command (see below). The larger the dataset, the more RAM the anonymization process will require
 
-To install the Microaggregation-based Anonymization Tool just copy the dat.jar file provided inside the folder "jar" in a folder in the computer hard disk. It is recommended to copy in the same folder the dataset to be anonymized and the XML configuration file for that dataset.
+To install the Microaggregation-based Anonymization Tool just copy the mAnt.jar file in the 'jar' folder in the computer hard disk. It is recommended to copy in the same folder the dataset to be anonymized and the XML configuration file for that dataset.
 
-### Semantic treatment of values
-The semantic treatment of values during the anonymization process consist of the consideration of the semantics of concepts in the calculation of the distance between concepts and in the calculation of the centroid of a cluster of concepts. For the semantic treatment of values (for example, medical information, as diagnosis or procedures), it is necessary to specify the location of the ontology in OWL format that models the knowledge of the domain of the attribute (see an example in the xml configuration files included in the 'datasets' directory). In the case of the example, the dataset includes medical values represented with Snomed codes. The ontology used (snomed-ontology.owl) has been generated from the Snomed CT International edition (RF2 format) released at: https://www.nlm.nih.gov/healthit/snomedct/international.html. For copyright reasons, the snomed-ontology.owl file is not included in this project. To generate the Snomed OWL ontology from the Snomed RF2 release, we used the "Snomed OWL Toolkit" from: https://github.com/IHTSDO/snomed-owl-toolkit. We have included the executable of this tool inside the "tools" directory. Once the Snomed CT RF2 file has been downloaded, the snomed ontology in OWL format is generated executing the following sentence from the console:
+### Semantic treatment of attributes
+![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) offers a semantically-grounded anonymization of nominal categorical attributes. With this, nominal attribute values will be compared and aggregated according to the semantics they encompass. For this, it is necessary to associate an OWL ontology modelling the domain of the nominal attribute. For example, the configuration file in the 'datasets' folder associates the values of the 'Diagnosis_ID' attribute to an ontology modelling SNOMED-CT concepts. This ontology (snomed-ontology.owl) has been generated from the SNOMED-CT International Edition (RF2 format) files (https://www.nlm.nih.gov/healthit/snomedct/international.html) with the 'Snomed OWL Toolkit' tool available at https://github.com/IHTSDO/snomed-owl-toolkit, as follows:
 ```
 java -jar snomed-owl-toolkit.jar -rf2-to-owl -rf2-snapshot-archives SnomedCT_InternationalRF2.zip
 ```                 
-where "SnomedCT_InternationalRF2.zip" corresponds to the file name of the RF2 Snomed CT downloaded.
+where 'SnomedCT_InternationalRF2.zip' corresponds to the file name of the RF2 SNOMED-CT release.
+
+For copyright reasons, the 'snomed-ontology.owl' file is not included in this project.
+
 ### Running
-To run the Microaggregation-based Anonymization Tool, access the folder where the dat.jar file has been copied and execute the following sentence from the console:
+To run ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}), access the folder where the mAnt.jar file has been stored and execute the following command from the console:
 ```
 java -jar -Xmx1024m -Xms1024m mAnt.jar dataset_name configuration_file_name
 ```
-Where the dataset_name corresponds to the name of the dataset to be anonymized and configuration:file_name corresponds to the XML file containing the configuration for the dataset.
+where the 'dataset_name' corresponds to the name of the dataset to be anonymized and the 'configuration_file_name' corresponds to the XML file specifying the configuration parameters for the dataset.
 
-The Xmx and Xms parameters specify the amount of memory that will be available for the application, in function of the size of the dataset to be anonymized and the amount of RAM memory available in the system, these parameters can be modify. In this case it is reserved 1 Gb of RAM memory for the process.
+The -Xmx and -Xms parameters specify the amount of memory that will be available for the application. These can be modified according to the size of the dataset and the amount of RAM available in the system.
 
-The resulting anonymized dataset will be stored in the same directory, with the same name of the original dataset but adding "\_anom" to the original name. In addition, several metrics assessing the utility of the anonymized dataset will be shown in the console.
+The resulting anonymized dataset will be stored in the same directory, with the same name as the original dataset but with '\_anom' suffix. In addition, several metrics assessing the utility of the anonymized dataset are shown in the console.
 
-### Examples
-
-Taking the sample dataset and configuration files stored inside the folder "datasets", in the following we show some examples about different dataset anonymizations.
-
-To anonymize the dataset applying in quasi-identifiers attributes microaggreation based k-anonymity with k = 3, execute the follow command in the console (the xml file determines the protection method for the attribute type):
-
-```
-java -jar -Xmx1024m -Xms1024m mAnt.jar data_example_snomed.txt properties1Snomed.xml
-```
-As result, it is generated an anonymized dataset named "dataset_example_anom.txt" in the same directory.
-
-To anonymize the dataset applying in quasi-identifiers attributes microaggreation based k-anonymity with k = 3 and applying in confidential attributes microaggreation based t-closeness with t = 0.25, execute the follow command in the console (the xml file determines the protection method for the attribute type):
-
-```
-java -jar -Xmx1024m -Xms1024m mAnt.jar data_example_snomed.txt properties2Snomed.xml
-```
-As result, it is generated an anonymized dataset named "dataset_example_anom.txt" in the same directory, if the file exists in the folder, it is replaced by the new one.
 
 ## Authors
 
-* Researchers of the CRISES group of the Universitat Rovira i Virgili in Tarragona (Catalonia, Spain).
-https://crises-deim.urv.cat/web/
+* Researchers of the [CRISES](https://crises-deim.urv.cat/web/) group of the [Universitat Rovira i Virgili](http://www.urv.cat/en/) in Tarragona (Catalonia, Spain).
 
+## Resources
+
+The algorithms implemented by ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) are detailed in the following publications:
+
+Sergio Martínez, David Sánchez, Aïda Valls:
+[A semantic framework to protect the privacy of electronic health records with non-numerical attributes](https://doi.org/10.1016/j.jbi.2012.11.005). Journal of Biomedical Informatics 46(2): 294-303 (2013)
+
+Sergio Martínez, Aïda Valls, David Sánchez:
+[Semantically-grounded construction of centroids for datasets with textual attributes](https://doi.org/10.1016/j.knosys.2012.04.030). Knowl.-Based Syst. 35: 160-172 (2012)
+
+David Sánchez, Montserrat Batet, David Isern, Aïda Valls:
+[Ontology-based semantic similarity: A new feature-based approach](https://doi.org/10.1016/j.eswa.2012.01.082). Expert Syst. Appl. 39(9): 7718-7728 (2012)
+
+Jordi Soria-Comas, Josep Domingo-Ferrer, David Sánchez, Sergio Martínez:
+[*t*-Closeness through Microaggregation: Strict Privacy with Enhanced Utility Preservation](https://doi.ieeecomputersociety.org/10.1109/TKDE.2015.2435777). IEEE Trans. Knowl. Data Eng. 27(11): 3098-3110 (2015)
 
 ## License
 
