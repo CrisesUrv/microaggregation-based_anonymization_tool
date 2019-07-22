@@ -73,6 +73,7 @@ public class Test {
 			System.out.println("Error: Only 1 confidential attribute is allowed in t-closeness anonymization");
 		} catch (NoOntologyInSemanticDataTypeException e) {
 			System.out.println("Error: No ontology indicated in semantic data type: " + e.getParameter());
+			//necessary ontology
 		} catch (OntologyNotFoundException e) {
 			System.out.println("Error: Ontology not found or wrong");
 		}
