@@ -136,7 +136,8 @@ public class Distances {
 		typicalDev = new double[numAttr];
 		for(int i=0; i<numAttr; i++){
 			if(RecordQ.getListDataTypes().get(i).equalsIgnoreCase(Constants.categoric) ||
-			   RecordQ.getListDataTypes().get(i).equalsIgnoreCase(Constants.categoricOrdinal)){
+			   RecordQ.getListDataTypes().get(i).equalsIgnoreCase(Constants.categoricOrdinal) ||
+			   RecordQ.getListDataTypes().get(i).equalsIgnoreCase(Constants.semantic)){
 				dev = 0.5;
 			}
 			else{
@@ -164,7 +165,8 @@ public class Distances {
 		
 		for(int i=0; i<numAttr; i++){
 			if(Record.getListDataTypes().get(i).equalsIgnoreCase(Constants.categoric) ||
-			   Record.getListDataTypes().get(i).equalsIgnoreCase(Constants.categoricOrdinal)){
+			   Record.getListDataTypes().get(i).equalsIgnoreCase(Constants.categoricOrdinal) ||
+			   Record.getListDataTypes().get(i).equalsIgnoreCase(Constants.semantic)){
 				dev = 0.5;
 			}
 			else{
@@ -228,7 +230,8 @@ public class Distances {
 		
 		for(int i=0; i<numAttr; i++){
 			if(RecordQ.getListDataTypes().get(i).equalsIgnoreCase(Constants.categoric) ||
-			   RecordQ.getListDataTypes().get(i).equalsIgnoreCase(Constants.categoricOrdinal)){
+			   RecordQ.getListDataTypes().get(i).equalsIgnoreCase(Constants.categoricOrdinal) ||
+			   RecordQ.getListDataTypes().get(i).equalsIgnoreCase(Constants.semantic)){
 				dev = 0.5;
 			}
 			else{

@@ -1,0 +1,1098 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology"
+     xml:base="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology">
+        <rdfs:comment>Ontology for age attribute</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#Age -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#Age">
+        <rdfs:comment xml:lang="es">Edad</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0-12 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0-12">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0-25"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0-25 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0-25">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0-50"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#26-50"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0-50 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0-50">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#Age"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#50-100"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0-6 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0-6">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0-12"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#13-19 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#13-19">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#13-25"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#13-25 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#13-25">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0-25"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#20-25 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#20-25">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#13-25"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#26-32 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#26-32">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#26-38"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#26-38 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#26-38">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#26-50"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#26-50 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#26-50">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0-50"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#33-38 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#33-38">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#26-38"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#39-44 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#39-44">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#39-50"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#39-50 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#39-50">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#26-50"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#45-50 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#45-50">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#39-50"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#50-100 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#50-100">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#Age"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#51-57 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#51-57">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#51-63"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#51-63 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#51-63">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#51-75"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#51-75 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#51-75">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#50-100"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#76-100"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#58-63 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#58-63">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#51-63"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#64-69 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#64-69">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#64-75"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#64-75 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#64-75">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#51-75"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#7-12 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#7-12">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0-12"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#70-75 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#70-75">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#64-75"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#76-100 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#76-100">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#50-100"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#76-81 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#76-81">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#76-87"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#76-87 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#76-87">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#76-100"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#82-87 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#82-87">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#76-87"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#88-100 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#88-100">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#76-100"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#88-94 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#88-94">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#88-100"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#95-100 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#95-100">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#88-100"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0-6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0-6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#7-12"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#100 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#100">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#95-100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#7-12"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#7-12"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#13-19"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#13-19"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#13-19"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#13-19"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#13-19"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#18">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#13-19"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#19">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#13-19"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0-6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#20-25"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#20-25"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#22">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#20-25"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#23">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#20-25"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#24">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#20-25"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#25">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#20-25"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#26 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#26">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#26-32"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#27 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#27">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#26-32"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#28">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#26-32"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#29 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#29">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#26-32"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0-6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#30">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#26-32"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#31 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#31">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#26-32"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#32">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#26-32"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#33 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#33">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#33-38"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#34 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#34">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#33-38"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#35">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#33-38"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#36">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#33-38"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#37 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#37">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#33-38"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#38 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#38">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#33-38"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#39 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#39">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#39-44"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0-6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#40 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#40">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#39-44"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#41 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#41">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#39-44"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#42 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#42">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#39-44"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#43 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#43">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#39-44"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#44 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#44">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#39-44"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#45 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#45">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#45-50"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#46 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#46">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#45-50"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#47 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#47">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#45-50"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#48 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#48">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#45-50"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#49 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#49">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#45-50"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0-6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#50 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#50">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#45-50"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#51 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#51">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#51-57"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#52 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#52">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#51-57"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#53 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#53">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#51-57"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#54 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#54">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#51-57"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#55 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#55">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#51-57"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#56 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#56">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#51-57"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#57 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#57">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#51-57"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#58 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#58">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#58-63"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#59 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#59">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#58-63"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#0-6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#60 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#60">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#58-63"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#61 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#61">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#58-63"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#62 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#62">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#58-63"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#63 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#63">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#58-63"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#64 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#64">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#64-69"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#65 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#65">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#64-69"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#66 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#66">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#64-69"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#67 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#67">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#64-69"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#68 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#68">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#64-69"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#69 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#69">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#64-69"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#7-12"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#70 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#70">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#70-75"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#71 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#71">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#70-75"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#72 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#72">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#70-75"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#73 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#73">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#70-75"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#74 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#74">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#70-75"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#75 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#75">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#70-75"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#76 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#76">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#76-81"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#77 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#77">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#76-81"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#78 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#78">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#76-81"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#79 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#79">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#76-81"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#7-12"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#80 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#80">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#76-81"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#81 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#81">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#76-81"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#82 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#82">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#82-87"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#83 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#83">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#82-87"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#84 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#84">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#82-87"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#85 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#85">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#82-87"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#86 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#86">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#82-87"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#87 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#87">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#82-87"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#88 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#88">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#88-94"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#89 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#89">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#88-94"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#7-12"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#90 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#90">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#88-94"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#91 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#91">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#88-94"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#92 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#92">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#88-94"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#93 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#93">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#88-94"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#94 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#94">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#88-94"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#95 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#95">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#95-100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#96 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#96">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#95-100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#97 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#97">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#95-100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#98 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#98">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#95-100"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#99 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#99">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2017/11/age-ontology#95-100"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -25,6 +25,7 @@ public class Test {
 		AnonymizationConfig anonymizationConfig;
 		Anonymization anonymization;
 		InformationLossResult informationLossResult;
+		long start, end;
 		
 		if(args.length != 2){
 			System.out.println("Error in parameters.");
@@ -39,7 +40,10 @@ public class Test {
 			anonymizationConfig = new AnonymizationConfig(xmlConfigLocation, datasetLocation);
 			//Anonymization 
 			anonymization = new Anonymization(anonymizationConfig.getDataset());
+			start = System.currentTimeMillis();
 			anonymization.anonymize();
+			end = System.currentTimeMillis();
+			System.out.println("Anonymization time: " + (end - start) + " miliSecs");
 			//Save the anonymized dataset
 			anonymization.saveAnonymizedDataset(getNameAnonymizedDataset(datasetLocation));
 			//Calculate information loss metrics

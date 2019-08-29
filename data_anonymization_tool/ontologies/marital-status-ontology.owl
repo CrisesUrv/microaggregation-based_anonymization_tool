@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#"
+     xml:base="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Coupled -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Coupled">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Marital-Status"/>
+        <rdfs:comment xml:lang="es">Unido</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Divorced -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Divorced">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Separated"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Marital-Status -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Marital-Status">
+        <rdfs:comment xml:lang="es">Estado-Marital</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Married-AF-spouse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Married-AF-spouse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Coupled"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Married-civ-spouse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Married-civ-spouse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Coupled"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Married-spouse-absent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Married-spouse-absent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Other"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Never-married -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Never-married">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Single"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Other -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Other">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Marital-Status"/>
+        <rdfs:comment xml:lang="es">Otro</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Separated -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Separated">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Single"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Single -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Single">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Marital-Status"/>
+        <rdfs:comment xml:lang="es">Soltero</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Widowed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Widowed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-61#Single"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

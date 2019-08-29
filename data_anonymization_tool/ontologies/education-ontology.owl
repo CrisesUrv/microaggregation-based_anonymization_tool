@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#"
+     xml:base="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Education -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Education">
+        <rdfs:comment xml:lang="es">Educación</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Junior-High-School -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Junior-High-School">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Secondary-Education"/>
+        <rdfs:comment xml:lang="es">Primer-Ciclo</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Post-compulsory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Post-compulsory">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Education"/>
+        <rdfs:comment xml:lang="es">Posescolar</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Postgraduate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Postgraduate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Post-compulsory"/>
+        <rdfs:comment xml:lang="es">Posgraduado</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Pregraduate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Pregraduate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Post-compulsory"/>
+        <rdfs:comment xml:lang="es">Pregraduado</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Primary-Education -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Primary-Education">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Education"/>
+        <rdfs:comment xml:lang="es">Educación-Primaria</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Secondary-Education -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Secondary-Education">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Education"/>
+        <rdfs:comment xml:lang="es">Educación-Secundaria</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Senior-High-School -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Senior-High-School">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Secondary-Education"/>
+        <rdfs:comment xml:lang="es">Segundo-Ciclo</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Assoc-acdm -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Assoc-acdm">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Pregraduate"/>
+        <rdfs:comment xml:lang="es">Asoc-acdm</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Assoc-voc -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Assoc-voc">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Pregraduate"/>
+        <rdfs:comment xml:lang="es">Asoc-voc</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Bachelors -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Bachelors">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Pregraduate"/>
+        <rdfs:comment xml:lang="es">Licenciados</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Doctorate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Doctorate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Postgraduate"/>
+        <rdfs:comment xml:lang="es">Doctorado</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#HS-grad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#HS-grad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Senior-High-School"/>
+        <rdfs:comment xml:lang="es">Graduado_de_colegio</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Masters -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Masters">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Postgraduate"/>
+        <rdfs:comment xml:lang="es">Masters</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Preschool -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Preschool">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Primary-Education"/>
+        <rdfs:comment xml:lang="es">Preescolar</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Prof-school -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Prof-school">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Postgraduate"/>
+        <rdfs:comment xml:lang="es">Profesor_de_escuela</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Some-college -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Some-college">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Pregraduate"/>
+        <rdfs:comment xml:lang="es">Algo_de_colegio</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#1st-4th -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#1st-4th">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Primary-Education"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#10th -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#10th">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Senior-High-School"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#11th -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#11th">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Senior-High-School"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#12th -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#12th">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Senior-High-School"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#5th-6th -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#5th-6th">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Primary-Education"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#7th-8th -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#7th-8th">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Junior-High-School"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#9th -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#9th">
+        <rdf:type rdf:resource="http://www.semanticweb.org/luisd/ontologies/2018/0/untitled-ontology-58#Junior-High-School"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:comment xml:lang="en">Education</rdfs:comment>
+        <rdfs:comment xml:lang="es">Educación</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

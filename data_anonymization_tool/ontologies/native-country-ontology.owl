@@ -1,0 +1,597 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#"
+     xml:base="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+        <rdfs:comment xml:lang="es">Canada</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#African_country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#African_country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#country_zone"/>
+        <rdfs:comment xml:lang="es">país_africano</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Asian_country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Asian_country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#country_zone"/>
+        <rdfs:comment xml:lang="es">país_asiático</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Balkan_country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Balkan_country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#European_country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Central_American_country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Central_American_country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#North_American_country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Country">
+        <rdfs:comment xml:lang="es">País</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#European_country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#European_country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#country_zone"/>
+        <rdfs:comment xml:lang="es">país_europeo</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#North_American_country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#North_American_country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#country_zone"/>
+        <rdfs:comment xml:lang="es">país_norteamericano</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#South_American_country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#South_American_country">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#country_zone"/>
+        <rdfs:comment xml:lang="es">país_sudamericano</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#administrative_district -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#administrative_district">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#district"/>
+        <rdfs:comment xml:lang="es">distrito_adminitrativo</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#city -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#city">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#municipality"/>
+        <rdfs:comment xml:lang="es">ciudad</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#commonwealth -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#commonwealth">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#state"/>
+        <rdfs:comment xml:lang="es">mancomunidad</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#country_zone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#country_zone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#administrative_district"/>
+        <rdfs:comment xml:lang="es">Zona_del_país</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#district -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#district">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#region"/>
+        <rdfs:comment xml:lang="es">distrito</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#island -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#island">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#land"/>
+        <rdfs:comment xml:lang="es">isla</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#land -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#land">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Country"/>
+        <rdfs:comment xml:lang="es">tierra</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#municipality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#municipality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#administrative_district"/>
+        <rdfs:comment xml:lang="es">municipalidad</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#region -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#region">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Country"/>
+        <rdfs:comment xml:lang="es">región</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#state -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#state">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#administrative_district"/>
+        <rdfs:comment xml:lang="es">estado</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Cambodia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Cambodia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Asian_country"/>
+        <rdfs:comment xml:lang="es">Cambodia</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Canada -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Canada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#North_American_country"/>
+        <rdfs:comment xml:lang="es">Canadá</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#China -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#China">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Asian_country"/>
+        <rdfs:comment xml:lang="es">China</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Columbia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Columbia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#South_American_country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Cuba -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Cuba">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#country_zone"/>
+        <rdfs:comment xml:lang="es">Cuba</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Dominican-Republic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Dominican-Republic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#country_zone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Ecuador -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Ecuador">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#South_American_country"/>
+        <rdfs:comment xml:lang="es">Ecuador</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#El-Salvador -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#El-Salvador">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Central_American_country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#England -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#England">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#European_country"/>
+        <rdfs:comment xml:lang="es">Inglaterra</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#France -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#France">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#European_country"/>
+        <rdfs:comment xml:lang="es">Francia</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Germany -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Germany">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#European_country"/>
+        <rdfs:comment xml:lang="es">Alemania</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Greece -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Greece">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Balkan_country"/>
+        <rdfs:comment xml:lang="es">Grecia</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Guatemala -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Guatemala">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Central_American_country"/>
+        <rdfs:comment xml:lang="es">Guatemala</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Haiti -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Haiti">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#country_zone"/>
+        <rdfs:comment xml:lang="es">Haití</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Holand-Netherlands -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Holand-Netherlands">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#European_country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Honduras -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Honduras">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Central_American_country"/>
+        <rdfs:comment xml:lang="es">Honduras</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Hong -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Hong">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#city"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Hungary -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Hungary">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#European_country"/>
+        <rdfs:comment xml:lang="es">Hungría</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#India -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#India">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Asian_country"/>
+        <rdfs:comment xml:lang="es">India</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Iran -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Iran">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Asian_country"/>
+        <rdfs:comment xml:lang="es">Irán</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Ireland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Ireland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#European_country"/>
+        <rdfs:comment xml:lang="es">Irlanda</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Italy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Italy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#European_country"/>
+        <rdfs:comment xml:lang="es">Italia</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Jamaica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Jamaica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#country_zone"/>
+        <rdfs:comment xml:lang="es">Jamaica</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Japan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Japan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Asian_country"/>
+        <rdfs:comment xml:lang="es">Japón</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Laos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Laos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Asian_country"/>
+        <rdfs:comment xml:lang="es">Laos</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Mexico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Mexico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#North_American_country"/>
+        <rdfs:comment xml:lang="es">México</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Nicaragua -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Nicaragua">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Central_American_country"/>
+        <rdfs:comment xml:lang="es">Nicaragua</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Peru -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Peru">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#South_American_country"/>
+        <rdfs:comment xml:lang="es">Perú</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Philippines -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Philippines">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#country_zone"/>
+        <rdfs:comment xml:lang="es">Filipinas</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Poland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Poland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#European_country"/>
+        <rdfs:comment xml:lang="es">Polonia</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Portugal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Portugal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#European_country"/>
+        <rdfs:comment xml:lang="es">Portugal</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Puerto-Rico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Puerto-Rico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#commonwealth"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Scotland -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Scotland">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#European_country"/>
+        <rdfs:comment xml:lang="es">Escocia</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Serbia_and_Montenegro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Serbia_and_Montenegro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#European_country"/>
+        <rdfs:comment xml:lang="es">Serbia_y_Montenegro</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#South -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#South">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#African_country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Taiwan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Taiwan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#island"/>
+        <rdfs:comment xml:lang="es">Taiwan</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Thailand -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Thailand">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Asian_country"/>
+        <rdfs:comment xml:lang="es">Tailandia</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#United-States -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#United-States">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#North_American_country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Vietnam -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Vietnam">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Asian_country"/>
+        <rdfs:comment xml:lang="es">Vietnam</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Yugoslavia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Yugoslavia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#European_country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Outlying-US(Guam-USVI-etc) -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Outlying-US(Guam-USVI-etc)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#country_zone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Trinadad&amp;Tobago -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#Trinadad&amp;Tobago">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/country-ontology#island"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:comment xml:lang="en">country</rdfs:comment>
+        <rdfs:comment xml:lang="es">país</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -165,7 +165,8 @@ public class Anonymization {
 		//calculating attribute variances of original dataset
 		for(int i=0; i<numAttr; i++){
 			if(Record.getListDataTypes().get(i).equalsIgnoreCase(Constants.categoric) ||
-			   Record.getListDataTypes().get(i).equalsIgnoreCase(Constants.categoricOrdinal)){
+			   Record.getListDataTypes().get(i).equalsIgnoreCase(Constants.categoricOrdinal) ||
+			   Record.getListDataTypes().get(i).equalsIgnoreCase(Constants.semantic)){
 				originalMean[i] = 0;
 				originalVariance[i] = 0;
 			}
@@ -187,7 +188,8 @@ public class Anonymization {
 		//calculating attribute variances of anonymized dataset
 		for(int i=0; i<numAttr; i++){
 			if(Record.getListDataTypes().get(i).equalsIgnoreCase(Constants.categoric) ||
-			   Record.getListDataTypes().get(i).equalsIgnoreCase(Constants.categoricOrdinal)){
+			   Record.getListDataTypes().get(i).equalsIgnoreCase(Constants.categoricOrdinal) ||
+			   Record.getListDataTypes().get(i).equalsIgnoreCase(Constants.semantic)){
 				originalMean[i] = 0;
 				originalVariance[i] = 0;
 			}

@@ -1,0 +1,382 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#"
+     xml:base="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Occupation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Occupation">
+        <rdfs:comment xml:lang="es">Ocupación</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#academic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#academic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#person"/>
+        <rdfs:comment xml:lang="es">académico</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#administrator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#administrator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#head"/>
+        <rdfs:comment xml:lang="es">administrador</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#adult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#adult">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#person"/>
+        <rdfs:comment xml:lang="es">adulto</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#businessperson -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#businessperson">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#capitalist"/>
+        <rdfs:comment xml:lang="es">hombre_de_negocios</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#capitalist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#capitalist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#person"/>
+        <rdfs:comment xml:lang="es">capitalista</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#creator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#creator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#person"/>
+        <rdfs:comment xml:lang="es">creador</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#domestic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#domestic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#servant"/>
+        <rdfs:comment xml:lang="es">doméstico</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#employee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#employee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#worker"/>
+        <rdfs:comment xml:lang="es">empleado</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#enlisted_person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#enlisted_person">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#serviceman"/>
+        <rdfs:comment xml:lang="es">persona_alistada</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#expert -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#expert">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#person"/>
+        <rdfs:comment xml:lang="es">experto</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#head -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#head">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#leader"/>
+        <rdfs:comment xml:lang="es">director</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#laborer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#laborer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#workman"/>
+        <rdfs:comment xml:lang="es">mano_de_obra</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#leader -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#leader">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#person"/>
+        <rdfs:comment xml:lang="es">líder</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#merchant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#merchant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#businessperson"/>
+        <rdfs:comment xml:lang="es">mercante</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#person">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Occupation"/>
+        <rdfs:comment xml:lang="es">persona</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#preserver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#preserver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#person"/>
+        <rdfs:comment xml:lang="es">preservador</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#professional -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#professional">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#adult"/>
+        <rdfs:comment xml:lang="es">profesional</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#servant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#servant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#worker"/>
+        <rdfs:comment xml:lang="es">sirviente</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#serviceman -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#serviceman">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#skilled_worker"/>
+        <rdfs:comment xml:lang="es">militar</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#skilled_worker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#skilled_worker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#worker"/>
+        <rdfs:comment xml:lang="es">trabajador_cualificado</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#traveler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#traveler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#person"/>
+        <rdfs:comment xml:lang="es">viajero</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#worker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#worker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#person"/>
+        <rdfs:comment xml:lang="es">trabajador</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#workman -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#workman">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#employee"/>
+        <rdfs:comment xml:lang="es">trabajador</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Adm-clerical -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Adm-clerical">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#employee"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Armed-Forces -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Armed-Forces">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#enlisted_person"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Craft-repair -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Craft-repair">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#professional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Exec-managerial -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Exec-managerial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#administrator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Farming-fishing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Farming-fishing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#creator"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Handlers-cleaners -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Handlers-cleaners">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#laborer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Machine-op-inspct -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Machine-op-inspct">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#laborer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Other-service -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Other-service">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#domestic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Priv-house-serv -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Priv-house-serv">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#domestic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Prof-specialty -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Prof-specialty">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#expert"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Protective-serv -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Protective-serv">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#preserver"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Sales -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Sales">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#merchant"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Tech-support -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Tech-support">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#skilled_worker"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Transport-moving -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#Transport-moving">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#traveler"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#housekeeper -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#housekeeper">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#domestic"/>
+        <rdfs:comment xml:lang="es">amo de casa</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#student -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#student">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sergi/ontologies/2018/0/occupation-ontology#academic"/>
+        <rdfs:comment xml:lang="es">estudiante</rdfs:comment>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
