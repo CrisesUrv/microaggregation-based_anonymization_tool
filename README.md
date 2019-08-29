@@ -34,7 +34,7 @@ The computer should fulfill the following requirements:
 * Java (RE or DK) environment v8 must be installed (or, alternatively, OpenJDK 8). Java 8 can be downloaded from: https://www.java.com/en/download/
 * At least 4 GB of RAM memory are recommended. The RAM available for the application should be set in the execution command (see below). The larger the dataset, the more RAM the anonymization process will require. The formula to estimate the required RAM memory is in GBs:
 
-    ![equation](https://latex.codecogs.com/gif.download?RAM%20memory%20%3D%200.25+%5Cfrac%7B2n%5Ctimes%20%28%5Csum_%7Bi%3D1%7D%5E%7Bm%7Dw_%7Bi%7D%29%29%7D%7B1024%5E%7B3%7D%7D)
+  ![equation](http://latex.codecogs.com/gif.latex?RAM&space;memory=0.25&plus;\frac{2n\times&space;(\sum_{i=1}^{m}w_{i})}{1024^{3}})
 
 where, *n* is the number of records, *m* is the number of attributes and *w<sub>i*  is the average width in bytes of the *ith* attribute
 
@@ -165,7 +165,7 @@ java -jar -Xmx1024m -Xms1024m ./mAnt.jar ./data_example_snomed.txt ./properties2
 ```
 As result, it is generated an anonymized dataset named "dataset_example_anom.txt" in the same directory, if the file exists in the folder, it is replaced by the new one.
 
-In the same way as the previous dataset, to anonymize the "adult" dataset applying k-anonymity, execute the follow command in the console (the xml file determines the dataset and protection configurations, ontologies are located inside the directory "ontologies"):
+In the same way as the previous dataset, to anonymize the "adult" dataset applying k-anonymity, execute the follow command in the console (the xml file determines the dataset and protection configurations, ontologies are located inside the folder "ontologies"):
 
 ```
 java -jar -Xmx1024m -Xms1024m ./mAnt.jar ./adultData.txt ./properties1Adult.xml
