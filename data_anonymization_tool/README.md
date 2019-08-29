@@ -165,7 +165,7 @@ java -jar -Xmx1024m -Xms1024m ./mAnt.jar ./data_example_snomed.txt ./properties2
 ```
 As result, it is generated an anonymized dataset named "dataset_example_anom.txt" in the same directory, if the file exists in the folder, it is replaced by the new one.
 
-In the same way as the previous dataset, to anonymize the "adult" dataset applying k-anonymity, execute the follow command in the console (the xml file determines the dataset and protection configurations, ontologies are located inside the directory "ontologies"):
+In the same way as the previous dataset, to anonymize the "adult" dataset applying k-anonymity, execute the follow command in the console (the xml file determines the dataset and protection configurations, ontologies are located inside the folder "ontologies"):
 
 ```
 java -jar -Xmx1024m -Xms1024m ./mAnt.jar ./adultData.txt ./properties1Adult.xml
