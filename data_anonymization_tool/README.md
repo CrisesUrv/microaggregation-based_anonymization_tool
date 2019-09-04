@@ -54,12 +54,14 @@ For the "adult" dataset (see section "Examples" above), the ontologies modelling
 
 
 ### Code
-The code is located in this repository inside the folder https://github.com/CrisesUrv/microaggregation-based_anonymization_tool/tree/master/data_anonymization_tool/src/cat/urv. The code is divided into five packages:
-* anonymization: includes the control classes. Here the anonymization algorithms are codified
-* entities: includes the support entity classes  
+The code is located in this repository inside the folder https://github.com/CrisesUrv/microaggregation-based_anonymization_tool/tree/master/data_anonymization_tool/src/cat/urv. The code is divided into four packages:
+* anonymization: includes the entities and control classes. Here the anonymization algorithms are codified  
 * exception: includes the exception classes
 * test: includes the test classes
 * utils: includes different support classes such as, ontology access functions, distance calculators, comparators, xml reader and file access manager
+
+The following figure shows the UML diagram describing the structure of the code 
+<img src="img/anonymization.jpg" width="800" />
 
 The code can be imported to a java IDE (e.g. Eclipse) by clonning or downloading the project from the ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) main page on github (https://github.com/CrisesUrv/microaggregation-based_anonymization_tool). The necessary library OWL API and its dependences can be downloaded from https://github.com/owlcs/releases  
 
@@ -135,20 +137,20 @@ Inside the folder "datasets" there are two example datasets and four xml configu
 
 Taking the sample dataset "data_example_snomed.txt" and configuration files stored for this dataset inside the folder "datasets", in the following we show some examples about different dataset anonymizations. Specifically, the dataset "data_example_snomed.txt" includes all supported attribute types (see table below)
 
-| Attribute name  | data type          |
-| --------------- | ------------------ |
-| Patient_ID      | categorical        |
-| Name            | categorical        |
-| Last1           | categorical        |
-| Last2           | categorical        |
-| Gender          | categorical        |
-| Age             | numerical_discrete |
-| ZipCode         | categorical        |
-| Episode_ID      | categorical        |
-| Diagnosis_IDini | semantic           |
-| Admission_date  | date               |
-| Discharge_date  | date               |
-| Diagnosis_ID    | semantic           |
+| Attribute name  | data type        |
+| --------------- | ---------------- |
+| Patient_ID      | categoric        |
+| Name            | categoric        |
+| Last1           | categoric        |
+| Last2           | categoric        |
+| Gender          | categoric        |
+| Age             | numeric_discrete |
+| ZipCode         | categoric        |
+| Episode_ID      | categoric        |
+| Diagnosis_IDini | semantic         |
+| Admission_date  | date             |
+| Discharge_date  | date             |
+| Diagnosis_ID    | semantic         |
 
 
 To anonymize the dataset applying in quasi-identifiers attributes microaggreation based k-anonymity with k = 3, execute the follow command in the console (the xml file determines the protection method for the attribute type and the location of the necessary ontologies, in this case, inside the folder "ontologies" as set in the xml file):
@@ -165,7 +167,28 @@ java -jar -Xmx1024m -Xms1024m ./mAnt.jar ./data_example_snomed.txt ./properties2
 ```
 As result, it is generated an anonymized dataset named "dataset_example_anom.txt" in the same directory, if the file exists in the folder, it is replaced by the new one.
 
-In the same way as the previous dataset, to anonymize the "adult" dataset applying k-anonymity, execute the follow command in the console (the xml file determines the dataset and protection configurations, ontologies are located inside the folder "ontologies"):
+In a similar way as the previous dataset, taking inside the folder "datasets" the "adultData.txt" and the configuration files available for this dataset, we detail examples about different dataset anonymizations. In this case, the dataset "adultData.txt" includes the following attribute types:
+
+
+| Attribute name | data type        |
+| -------------- | ---------------- |
+| age            | numeric_discrete |
+| workclass      | semantic         |
+| fnlwgt         | numeric_discrete |
+| education      | semantic         |
+| education-num  | numeric_discrete |
+| marital-status | semantic         |
+| occupation     | semantic         |
+| relationship   | semantic         |
+| race           | semantic         |
+| sex            | semantic         |
+| capital-gain   | numeric_discrete |
+| capital-loss   | numeric_discrete |
+| hours-per-week | numeric_discrete |
+| native-country | semantic         |
+| prediction     | categoric        |
+
+To anonymize the "adult" dataset applying k-anonymity, execute the follow command in the console (the xml file determines the dataset and protection configurations, as set in the xml file,  ontologies are located inside the folder "ontologies"):
 
 ```
 java -jar -Xmx1024m -Xms1024m ./mAnt.jar ./adultData.txt ./properties1Adult.xml
