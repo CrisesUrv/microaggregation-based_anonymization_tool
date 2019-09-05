@@ -1,6 +1,6 @@
 # ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\huge&space;\mu\textbf{ANT})
 
-The Microaggregation-based Anonymization Tool (![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT})) is a software that anonymizes datasets applying microaggregation algorithms to fulfill *k*-anonymity or *k*-anonymity plus *t*-closeness. ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) has been developed by researchers of the [CRISES](https://crises-deim.urv.cat/web/) group at the [Universitat Rovira i Virgili](http://www.urv.cat/en/) in Tarragona (Catalonia, Spain).
+The Microaggregation-based Anonymization Tool (![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT})) is a software that anonymizes datasets applying microaggregation algorithms to fulfill *k*-anonymity or *k*-anonymity plus *t*-closeness [4]. ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) has been developed by researchers of the [CRISES](https://crises-deim.urv.cat/web/) group at the [Universitat Rovira i Virgili](http://www.urv.cat/en/) in Tarragona (Catalonia, Spain).
 
 ## Getting Started
 
@@ -13,7 +13,7 @@ As result, the tool outputs an anonymized version of the dataset and shows sever
 The application can executed via command line on Windows, Linux and Mac OS X. It also provides a JAVA API, so that the anonymization algorithms it implements can be called programmatically.
 
 ### Prerequisites
-* The input dataset: is a CSV file where each row corresponds to a record and each column corresponds to an attribute. Within the CSV file, a first line (header) stating the name of the attribute is required in order to map the attributes with their features in the configuration file. A sample dataset is stored in the 'datasets' folder
+* The input dataset: is a CSV file where each row corresponds to a record and each column corresponds to an attribute. Within the CSV file, a first line (header) stating the name of the attribute is required in order to map the attributes with their features in the configuration file. Our software does not currently support missing data points. So, preprocessing would be needed to either remove records with missing values or replace missing values by averages. Two sample datasets are stored in the 'datasets' folder
 * The dataset configuration parameters: are specified in an XML file, so that they can be reused for several datasets that share the same schema. Two configuration files associated to the sample dataset are stored in the 'datasets' folder. For each attribute, the following properties should be specified:
     * name: the name of the attribute. It must match with the name of the attribute in the dataset header
     * attribute_type: classifies the attribute as *identifier*, *quasi-identifier*, *confidential* and *non-confidential*, so that each attribute type can be subjected to a specific protection procedure
@@ -34,7 +34,7 @@ The computer should fulfill the following requirements:
 * Java (RE or DK) environment v8 must be installed (or, alternatively, OpenJDK 8). Java 8 can be downloaded from: https://www.java.com/en/download/
 * At least 4 GB of RAM memory are recommended. The RAM available for the application should be set in the execution command (see below). The larger the dataset, the more RAM the anonymization process will require. The formula to estimate the required RAM memory is in GBs:
 
-  ![equation](http://latex.codecogs.com/gif.latex?RAM&space;memory=0.25&plus;\frac{2n\times&space;(\sum_{i=1}^{m}w_{i})}{1024^{3}})
+![equation](http://latex.codecogs.com/gif.latex?RAM&space;memory=0.25&plus;\frac{2n\times&space;(\sum_{i=1}^{m}w_{i})}{1024^{3}})
 
 where, *n* is the number of records, *m* is the number of attributes and *w<sub>i*  is the average width in bytes of the *ith* attribute
 
@@ -42,8 +42,16 @@ Regarding to the scalability, for the most complex case, considering t-closeness
 
 To install the Microaggregation-based Anonymization Tool just copy the mAnt.jar file in the 'jar' folder in the computer hard disk. It is recommended to copy in the same folder the dataset to be anonymized and the XML configuration file for that dataset.
 
-### Semantic treatment of attributes
-![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) offers a semantically-grounded anonymization of nominal categorical attributes. With this, nominal attribute values will be compared and aggregated according to the semantics they encompass. For this, it is necessary to associate an OWL ontology modelling the domain of the nominal attribute. For example, the configuration file in the 'datasets' folder associates the values of the 'Diagnosis_ID' attribute to an ontology modelling SNOMED-CT concepts. This ontology (snomed-ontology.owl) has been generated from the SNOMED-CT International Edition (RF2 format) files (https://www.nlm.nih.gov/healthit/snomedct/international.html) with the 'Snomed OWL Toolkit' tool available at https://github.com/IHTSDO/snomed-owl-toolkit, as follows:
+### Treatment of numerical attributes
+
+Numerical values are normalized by the variance of the sample, in order to prevent attributes with wide ranges from dominating attributes with narrower ranges. The distance between two numerical attribute values is calculated as follow:
+
+![equation](http://latex.codecogs.com/gif.latex?dist(x_{ik},x_{jk})=\sqrt{\left&space;(&space;\frac{x_{ik}-x_{jk}}{\sigma&space;^{2}_{k}}&space;\right&space;)^{2}})
+
+where, *x<sub>ik* and *x<sub>jk* are the *ith* and *jth* values of the *kth* attribute and ![equation](http://latex.codecogs.com/gif.latex?\sigma&space;^{2}_{k}) is the typical deviation of the *kth* attribute.
+
+### Semantic treatment of nominal categorical attributes
+![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) offers a semantically-grounded anonymization of nominal categorical attributes (see [1, 2, 3]). With this, nominal attribute values will be compared and aggregated according to the semantics they encompass. For this, it is necessary to associate an OWL ontology modelling the domain of the nominal attribute. For example, the configuration file in the 'datasets' folder associates the values of the 'Diagnosis_ID' attribute to an ontology modelling SNOMED-CT concepts. This ontology (snomed-ontology.owl) has been generated from the SNOMED-CT International Edition (RF2 format) files (https://www.nlm.nih.gov/healthit/snomedct/international.html) with the 'Snomed OWL Toolkit' tool available at https://github.com/IHTSDO/snomed-owl-toolkit, as follows:
 ```
 java -jar snomed-owl-toolkit.jar -rf2-to-owl -rf2-snapshot-archives SnomedCT_InternationalRF2.zip
 ```                 
@@ -60,7 +68,7 @@ The code is located in this repository inside the folder https://github.com/Cris
 * test: includes the test classes
 * utils: includes different support classes such as, ontology access functions, distance calculators, comparators, xml reader and file access manager
 
-The following figure shows the UML diagram describing the structure of the code 
+The following figure shows the UML diagram describing the structure of the code
 <img src="img/anonymization.jpg" width="800" />
 
 The code can be imported to a java IDE (e.g. Eclipse) by clonning or downloading the project from the ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) main page on github (https://github.com/CrisesUrv/microaggregation-based_anonymization_tool). The necessary library OWL API and its dependences can be downloaded from https://github.com/owlcs/releases  
@@ -118,6 +126,10 @@ The possible protection values are:
   t="0.25">
 </attribute_type>
 ```
+Note that, in the case of t-closeness protection, for a data set containing *n* records and for a required level of *t*-closeness and *k*-anonymity, the cluster size will be [4]:
+
+![equation](http://latex.codecogs.com/gif.latex?cluster&space;size=max\left&space;(&space;k,\left&space;(&space;\frac{n}{2\left&space;(&space;n-1&space;\right&space;)t&plus;1}&space;\right&space;)&space;\right&space;))
+
 See complete examples of the xml configuration file inside the directory https://github.com/CrisesUrv/microaggregation-based_anonymization_tool/tree/master/data_anonymization_tool/datasets.  
 
 ### Running
@@ -240,16 +252,16 @@ A complete example describing the API usage is available in the file "TestApi.ja
 
 The algorithms implemented by ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) are detailed in the following publications:
 
-Sergio Martínez, David Sánchez, Aïda Valls:
+[1]. Sergio Martínez, David Sánchez, Aïda Valls:
 [A semantic framework to protect the privacy of electronic health records with non-numerical attributes](https://doi.org/10.1016/j.jbi.2012.11.005). Journal of Biomedical Informatics 46(2): 294-303 (2013)
 
-Sergio Martínez, Aïda Valls, David Sánchez:
+[2]. Sergio Martínez, Aïda Valls, David Sánchez:
 [Semantically-grounded construction of centroids for datasets with textual attributes](https://doi.org/10.1016/j.knosys.2012.04.030). Knowl.-Based Syst. 35: 160-172 (2012)
 
-David Sánchez, Montserrat Batet, David Isern, Aïda Valls:
+[3]. David Sánchez, Montserrat Batet, David Isern, Aïda Valls:
 [Ontology-based semantic similarity: A new feature-based approach](https://doi.org/10.1016/j.eswa.2012.01.082). Expert Syst. Appl. 39(9): 7718-7728 (2012)
 
-Jordi Soria-Comas, Josep Domingo-Ferrer, David Sánchez, Sergio Martínez:
+[4]. Jordi Soria-Comas, Josep Domingo-Ferrer, David Sánchez, Sergio Martínez:
 [*t*-Closeness through Microaggregation: Strict Privacy with Enhanced Utility Preservation](https://doi.ieeecomputersociety.org/10.1109/TKDE.2015.2435777). IEEE Trans. Knowl. Data Eng. 27(11): 3098-3110 (2015)
 
 ## License
