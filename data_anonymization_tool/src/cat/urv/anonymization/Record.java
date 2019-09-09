@@ -1,4 +1,4 @@
-package cat.urv.entities;
+package cat.urv.anonymization;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

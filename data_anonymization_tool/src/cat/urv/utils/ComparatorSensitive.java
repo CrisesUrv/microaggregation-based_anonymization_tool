@@ -2,7 +2,7 @@ package cat.urv.utils;
 
 import java.util.Comparator;
 
-import cat.urv.entities.RecordQ;
+import cat.urv.anonymization.RecordQ;
 
 public class ComparatorSensitive implements Comparator<RecordQ>{
 	static int attrSortCriteria;

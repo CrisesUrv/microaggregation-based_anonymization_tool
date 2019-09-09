@@ -6,10 +6,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import cat.urv.entities.Cluster;
-import cat.urv.entities.InformationLossResult;
-import cat.urv.entities.Record;
-import cat.urv.entities.RecordQ;
+
 import cat.urv.exception.InvalidConfidentialAttributeException;
 import cat.urv.exception.InvalidValueException;
 import cat.urv.exception.QuasiNotFoundException;

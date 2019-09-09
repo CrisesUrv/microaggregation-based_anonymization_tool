@@ -1,9 +1,9 @@
-package cat.urv.test;
+package cat.urv.main;
 
 import java.io.File;
 import cat.urv.anonymization.Anonymization;
 import cat.urv.anonymization.AnonymizationConfig;
-import cat.urv.entities.InformationLossResult;
+import cat.urv.anonymization.InformationLossResult;
 import cat.urv.exception.AttributeNameNotFoundException;
 import cat.urv.exception.DatasetNotFoundException;
 import cat.urv.exception.InvalidAttributeTypeException;
@@ -18,7 +18,7 @@ import cat.urv.exception.OntologyNotFoundException;
 import cat.urv.exception.QuasiNotFoundException;
 import cat.urv.exception.XmlNotFoundException;
 
-public class Test {
+public class Main {
 
 	public static void main(String[] args) {
 		String datasetLocation, xmlConfigLocation;

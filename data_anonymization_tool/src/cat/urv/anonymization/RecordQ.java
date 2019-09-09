@@ -1,4 +1,4 @@
-package cat.urv.entities;
+package cat.urv.anonymization;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

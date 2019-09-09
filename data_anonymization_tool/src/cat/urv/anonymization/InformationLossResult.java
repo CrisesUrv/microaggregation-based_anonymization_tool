@@ -1,4 +1,4 @@
-package cat.urv.entities;
+package cat.urv.anonymization;
 
 /**
  * Class that stores the results of the information loss calculation

@@ -13,8 +13,9 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
-import cat.urv.entities.Record;
-import cat.urv.entities.RecordQ;
+
+import cat.urv.anonymization.Record;
+import cat.urv.anonymization.RecordQ;
 import cat.urv.exception.InvalidAttributeTypeException;
 import cat.urv.exception.InvalidDataTypeException;
 import cat.urv.exception.InvalidProtectionException;

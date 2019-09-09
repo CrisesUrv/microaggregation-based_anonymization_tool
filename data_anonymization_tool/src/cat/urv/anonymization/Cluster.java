@@ -1,4 +1,4 @@
-package cat.urv.entities;
+package cat.urv.anonymization;
 
 import java.util.ArrayList;
 import java.util.HashMap;

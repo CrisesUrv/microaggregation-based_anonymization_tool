@@ -3,7 +3,6 @@ package cat.urv.anonymization;
 import java.io.File;
 import java.util.ArrayList;
 
-import cat.urv.entities.Record;
 import cat.urv.exception.AttributeNameNotFoundException;
 import cat.urv.exception.DatasetNotFoundException;
 import cat.urv.exception.InvalidAttributeTypeException;

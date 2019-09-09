@@ -6,8 +6,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-import cat.urv.entities.Record;
-import cat.urv.entities.RecordQ;
+import cat.urv.anonymization.Record;
+import cat.urv.anonymization.RecordQ;
 import cat.urv.exception.InvalidValueException;
 
 public class Distances {
