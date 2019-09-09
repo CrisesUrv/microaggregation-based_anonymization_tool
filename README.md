@@ -1,6 +1,6 @@
 # ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\huge&space;\mu\textbf{ANT})
 
-The Microaggregation-based Anonymization Tool (![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT})) is a software package to anonymize datasets using microaggregation algorithms fulfilling *k*-anonymity or *k*-anonymity plus *t*-closeness [4]. ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) has been developed by researchers of the [CRISES](https://crises-deim.urv.cat/web/) group at the [Universitat Rovira i Virgili](http://www.urv.cat/en/) in Tarragona (Catalonia, Spain).
+The Microaggregation-based Anonymization Tool (![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT})) is a software package to anonymize datasets using microaggregation algorithms fulfilling *k*-anonymity or *k*-anonymity plus *t*-closeness [[4]](#Resources). ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) has been developed by researchers of the [CRISES](https://crises-deim.urv.cat/web/) group at the [Universitat Rovira i Virgili](http://www.urv.cat/en/) in Tarragona (Catalonia, Spain).
 
 ## Getting Started
 
@@ -13,7 +13,7 @@ As result, the tool outputs an anonymized version of the dataset and shows sever
 The anonymization application can executed via command line on Windows, Linux and Mac OS X. It is also provided a JAVA API that allows the anonymization algorithms to be called programmatically.
 
 ### Prerequisites
-* *The input dataset*: is a CSV file where each row corresponds to a record and each column corresponds to an attribute. Within the CSV file, a first line (header) stating the name of the attributes is required in order to map the attributes with their features in the configuration file. The software does not currently support missing data points. So, preprocessing would be needed to either remove records with missing values or replace missing values by averages. Two sample datasets are provided in the 'datasets' folder. See more details in [Seccion Ejemplos].
+* *The input dataset*: is a CSV file where each row corresponds to a record and each column corresponds to an attribute. Within the CSV file, a first line (header) stating the name of the attributes is required in order to map the attributes with their features in the configuration file. The software does not currently support missing data points. So, preprocessing would be needed to either remove records with missing values or replace missing values by averages. Two sample datasets are provided in the 'datasets' folder. See more details in [examples](#Examples) section.
 * *The dataset configuration parameters*: are specified in an XML file, so that they can be reused for several datasets that share the same schema (see [Dataset description](#Dataset-description) section).
 * *The protection configuration parameters*: they set the type of protection applied to each attribute type (see [Protection description](#Protection-description) section).
 
@@ -30,8 +30,7 @@ where, *n* is the number of records, *m* is the number of attributes and *w<sub>
 
 The scalability of the software, in the most complex case considering *t*-closeness on top of *k*-anonymity, is *O(n log n)* w.r.t. the number of records and *O(m)* w.r.t. the number of attributes. This makes the software suitable for large datasets.
 
-To install ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}), just copy the *mAnt.jar* file in the github 'jar' folder [vículo del Git] in the computer hard disk. It is recommended to copy in the same folder the dataset to be anonymized and the XML configuration file for that dataset.
-
+To install ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}), just copy the *mAnt.jar* file in the github ['jar'](https://github.com/CrisesUrv/microaggregation-based_anonymization_tool/tree/master/data_anonymization_tool/jar) folder in the computer hard disk. It is recommended to copy in the same folder the dataset to be anonymized and the XML configuration file for that dataset.
 
 ### Code
 The source code is available in this repository inside the ['src'](https://github.com/CrisesUrv/microaggregation-based_anonymization_tool/tree/master/data_anonymization_tool/src/cat/urv) folder. The code is divided into five packages:
@@ -45,7 +44,6 @@ The following figure shows the UML class diagram of the main classes
 <img src="img/anonymization.jpg" width="800" />
 
 The source code can be imported to Java IDEs (e.g. Eclipse) by clonning or downloading the project from the ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) [main page](https://github.com/CrisesUrv/microaggregation-based_anonymization_tool) on github. The necessary library OWL API and its dependences can be downloaded from the [OWL API page](https://github.com/owlcs/releases) on Github.
-
 
 ### Configuration
 
@@ -66,7 +64,7 @@ It consists of the list of attributes in the dataset; for each attribute, its na
 	- *numeric_continuous*: decimal numbers
 	- *date*: dates in format yyyy/mm/dd
 	- *categoric*: textual values
-	- *semantic*: semantic nominal values. For semantic attributes, it is necessary to specify the location of an OWL ontology modeling the domain of the attribute values; see an example in the XML configuration files included in the 'datasets' directory [URL dataset directory hyperlink]
+	- *semantic*: semantic nominal values. For semantic attributes, it is necessary to specify the location of an OWL ontology modeling the domain of the attribute values; see an example in the XML configuration files included in the ['datasets'](https://github.com/CrisesUrv/microaggregation-based_anonymization_tool/tree/master/data_anonymization_tool/datasets) directory.
 
 Notice that numerical attributes are normalized by the variance of the sample, in order to prevent attributes with wide ranges from dominating attributes with narrower ranges.
 
@@ -107,7 +105,7 @@ An example of protection description in XML is as follows:
   t="0.25">
 </attribute_type>
 ```
-Note that, in the case of *t*-closeness on top of *k*-anonymity, for a data set containing *n* records and for the desired *t* and *k* values, the actual *k* (*k'*, i.e., cluster size) employed will be [4]:
+Note that, in the case of *t*-closeness on top of *k*-anonymity, for a data set containing *n* records and for the desired *t* and *k* values, the actual *k* (*k'*, i.e., cluster size) employed will be [[4]](#Resources):
 
 ![equation](http://latex.codecogs.com/gif.latex?k'=max\left&space;(&space;k,\left&space;(&space;\frac{n}{2\left&space;(&space;n-1&space;\right&space;)t&plus;1}&space;\right&space;)&space;\right&space;))
 
@@ -145,8 +143,7 @@ The file "data_example_snomed.txt" contains a sample of records with medical att
 | Discharge_date  | date             |
 | Diagnosis_ID    | semantic         |
 
-
-Semantic attributes (Diagnosis_IDini and Diagosis_ID) are expressed with SNOMED-CT codes. To semantically manage them, an OWL ontology modeling the domain of this values is needed. This ontology (snomed-ontology.owl) can be generated from the [SNOMED-CT International Edition](https://www.nlm.nih.gov/healthit/snomedct/international.html) (RF2 format) files with the ['Snomed OWL Toolkit'](https://github.com/IHTSDO/snomed-owl-toolkit) tool as follows:
+Semantic attributes (Diagnosis_IDini and Diagosis_ID) are expressed with SNOMED-CT codes. To semantically manage them [[1][2][3]](#Resources), an OWL ontology modeling the domain of this values is needed. This ontology (snomed-ontology.owl) can be generated from the [SNOMED-CT International Edition](https://www.nlm.nih.gov/healthit/snomedct/international.html) (RF2 format) files with the ['Snomed OWL Toolkit'](https://github.com/IHTSDO/snomed-owl-toolkit) tool as follows:
 
 ```
 java -jar snomed-owl-toolkit.jar -rf2-to-owl -rf2-snapshot-archives SnomedCT_InternationalRF2.zip
@@ -163,7 +160,6 @@ For example, to execute the anonymization with "properties1Snomed.xml", execute 
 java -jar -Xmx1024m -Xms1024m ./mAnt.jar ./data_example_snomed.txt ./properties1Snomed.xml
 ```
 As result, it is generated an anonymized dataset named "dataset_example_anom.txt" in the same directory.
-
 
 The second dataset available in the folder corresponds to the [UCI's Adult dataset](https://archive.ics.uci.edu/ml/datasets/Adult). It countains 30,162 complete records of census income information. The attributes it contains are the following:
 
@@ -207,7 +203,6 @@ Mean anonymized dataset attribute 0: 38.354187388104236
 Variance anonymized dataset attribute 0: 150.31308322169846
 ...
 ```
-
 
 ### API
 
