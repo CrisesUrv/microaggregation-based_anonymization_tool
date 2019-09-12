@@ -10,25 +10,25 @@ The Microaggregation-based Anonymization Tool (![equation](http://latex.codecogs
 
 As result, the tool outputs an anonymized version of the dataset and shows several utility metrics: Sum of Squared Error (SSE) and mean and variance divergence for each attribute vs. the original dataset.
 
-The anonymization application can executed via command line on Windows, Linux and Mac OS X. It is also provided a JAVA API that allows the anonymization algorithms to be called programmatically.
+The anonymization application can executed via command line on Windows, Linux and Mac OS X. A JAVA API is also provided that allows the anonymization algorithms to be called programmatically.
 
 ### Prerequisites
-* *The input dataset*: is a CSV file where each row corresponds to a record and each column corresponds to an attribute. Within the CSV file, a first line (header) stating the name of the attributes is required in order to map the attributes with their features in the configuration file. The software does not currently support missing data points. So, preprocessing would be needed to either remove records with missing values or replace missing values by averages. Two sample datasets are provided in the 'datasets' folder. See more details in [examples](#Examples) section.
-* *The dataset configuration parameters*: are specified in an XML file, so that they can be reused for several datasets that share the same schema (see [Dataset description](#Dataset-description) section).
-* *The protection configuration parameters*: they set the type of protection applied to each attribute type (see [Protection description](#Protection-description) section).
+* *The input dataset* is a CSV file where each row corresponds to a record and each column corresponds to an attribute. Within the CSV file, a first line (header) stating the name of the attributes is required in order to map the attributes to features in the configuration file. The software does not currently support missing data points. Hence, preprocessing would be needed to either remove records with missing values or replace missing values by averages. Two sample datasets are provided in the 'datasets' folder. See more details in [examples](#Examples) section.
+* *The dataset configuration parameters* are specified in an XML file, so that they can be reused for several datasets that share the same schema (see [Dataset description](#Dataset-description) section).
+* *The protection configuration parameters* set the type of protection applied to each attribute type (see [Protection description](#Protection-description) section).
 
-Two example configuration files associated to each sample dataset are provided in the ['datasets'](https://github.com/CrisesUrv/microaggregation-based_anonymization_tool/tree/master/data_anonymization_tool/datasets) folder.
+Two example configuration files associated with each sample dataset are provided in the ['datasets'](https://github.com/CrisesUrv/microaggregation-based_anonymization_tool/tree/master/data_anonymization_tool/datasets) folder.
 
 ### Installing
 The computer should fulfill the following requirements:
 * Java (RE or DK) environment v8 must be installed (or, alternatively, OpenJDK 8). Java 8 can be downloaded from: https://www.java.com/en/download/
-* At least 4 GB of RAM are recommended. The RAM available for the application should be set in the execution command (see below). The larger the dataset, the more RAM the anonymization process will require, since datasets are loaded into memory. The equation to estimate the required RAM (in GBs) is:
+* At least 4 GB of RAM are recommended. The RAM available for the application should be set in the execution command (see below). The larger the dataset, the more RAM the anonymization process will require, since datasets are loaded into memory. The expression to estimate the required RAM (in GBs) is:
 
 ![equation](http://latex.codecogs.com/gif.latex?RAM=0.25&plus;\frac{2n\times&space;(\sum_{i=1}^{m}w_{i})}{1024^{3}})
 
-where, *n* is the number of records, *m* is the number of attributes and *w<sub>i*  is the average width in bytes of the *ith* attribute
+where *n* is the number of records, *m* is the number of attributes and *w<sub>i*  is the average width in bytes of the *ith* attribute
 
-The scalability of the software, in the most complex case considering *t*-closeness on top of *k*-anonymity, is *O(n log n)* w.r.t. the number of records and *O(m)* w.r.t. the number of attributes. This makes the software suitable for large datasets.
+The computational complexity of the software, in the most complex case considering *t*-closeness on top of *k*-anonymity, scales as *O(n log n)* w.r.t. the number of records and as *O(m)* w.r.t. the number of attributes. This makes the software suitable for large datasets.
 
 To install ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}), just copy the *mAnt.jar* file in the github ['jar'](https://github.com/CrisesUrv/microaggregation-based_anonymization_tool/tree/master/data_anonymization_tool/jar) folder in the computer hard disk. It is recommended to copy in the same folder the dataset to be anonymized and the XML configuration file for that dataset.
 
@@ -36,14 +36,14 @@ To install ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\smal
 The source code is available in this repository inside the ['src'](https://github.com/CrisesUrv/microaggregation-based_anonymization_tool/tree/master/data_anonymization_tool/src/cat/urv) folder. The code is divided into five packages:
 * *anonymization*: includes the entity and control classes and the implementation of the anonymization algorithms
 * *exception*: includes the exception classes
-* *test*: includes a classe with examples on how to use the API calls
+* *test*: includes a class with examples on how to use the API calls
 * *main*: includes the runnable main class
 * *utils*: includes different support classes implementing ontology access functions, distance calculators, comparators, a xml reader and a file access manager
 
 The following figure shows the UML class diagram of the main classes
 <img src="img/anonymization.jpg" width="800" />
 
-The source code can be imported to Java IDEs (e.g. Eclipse) by clonning or downloading the project from the ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) [main page](https://github.com/CrisesUrv/microaggregation-based_anonymization_tool) on github. The necessary library OWL API and its dependences can be downloaded from the [OWL API page](https://github.com/owlcs/releases) on Github.
+The source code can be imported to Java IDEs (e.g. Eclipse) by cloning or downloading the project from the ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) [main page](https://github.com/CrisesUrv/microaggregation-based_anonymization_tool) on github. The necessary library OWL API and its dependences can be downloaded from the [OWL API page](https://github.com/owlcs/releases) on Github.
 
 ### Configuration
 
@@ -51,15 +51,15 @@ The parameters needed to configure the anonymization system are stored in an XML
 
 #### Dataset description     
 
-It consists of the list of attributes in the dataset; for each attribute, its name, sensitivity and data type are specified. The data types ensure that the appropriate operations are used to compare and transform the attribute values. Following, each parameter is described.
+It consists of the list of attributes in the dataset; for each attribute, its name, sensitivity and data type are specified. The data types ensure that the appropriate operations are used to compare and transform the attribute values. In what follows, each parameter is described.
 
-* *name*: this parameter indicates the name of the attribute. The name must match with the attribute name in the header of the CSV file.
-* *attribute_type*: indicates the sensitivity of the attribute. The possible values are:
+* *name*: this parameter indicates the name of the attribute. The name must match the attribute name in the header of the CSV file.
+* *attribute_type*: it indicates the sensitivity of the attribute. The possible values are:
 	- *identifier*: the attribute unequivocally identifies the subject
 	- *quasi-identifier*: the attribute may identify the subject if it is combined with values of other attributes
 	- *confidential*: the attribute contains sensitive information
 	- *non-confidential*: the remaining non-sensitive attributes
-* *data_type*: it indicates the data type of the attribute. The possible data values are:
+* *data_type*: it indicates the type of the attribute. The possible values are:
 	- *numeric_discrete*: natural numbers
 	- *numeric_continuous*: decimal numbers
 	- *date*: dates in format yyyy/mm/dd
@@ -84,7 +84,7 @@ An example of attribute description in XML is as follows:
 It states the protection method to be applied for each attribute type. To do this, for each attribute type, the following values can be defined:
 * *type*: the *attribute_type* described above (*identifier*, *quasi-identifier*, *confidential*, *non-confidential*)
 * *protection*: the method to be used to anonymize the attributes of this attribute type:
-  * *suppression*: suppresses the value (specifically, changes the value by an '\*'). Usually employed to protect identifying attributes
+  * *suppression*: suppresses the value (specifically, replaces the value by an '\*'). Usually employed to protect identifying attributes
   * *k-anonymity*: applies microaggregation-based *k*-anonymity. Typically used to protect quasi-identifiers and avoid identity disclosure
     * *k*: the desired value of *k* for *k*-anonymity
   * *t-closeness*: applies microaggregation-based *t*-closeness. This offers protection against attribute disclosure for confidential attributes
@@ -154,12 +154,12 @@ For copyright reasons, the 'snomed-ontology.owl' file is not included in this pr
 
 Two XML configuration files are included to characterize the dataset and its protection: "properties1Snomed.xml", which is configured to use *3*-anonymity on quasi-identifiers and "properties2Snomed.xml", which is configured to use *3*-anonymity on quasi-identifiers and *0.25*-closeness on confidential attributes.
 
-For example, to execute the anonymization with "properties1Snomed.xml", execute the follow command in the console:
+For example, to perform the anonymization with "properties1Snomed.xml", execute the follow command in the console:
 
 ```
 java -jar -Xmx1024m -Xms1024m ./mAnt.jar ./data_example_snomed.txt ./properties1Snomed.xml
 ```
-As result, it is generated an anonymized dataset named "dataset_example_anom.txt" in the same directory.
+As result, an anonymized dataset named "dataset_example_anom.txt" is generated in the same directory.
 
 The second dataset available in the folder corresponds to the [UCI's Adult dataset](https://archive.ics.uci.edu/ml/datasets/Adult). It countains 30,162 complete records of census income information. The attributes it contains are the following:
 
@@ -185,12 +185,12 @@ For the semantic attributes, appropriate ontologies are also provided in the ['o
 
 Again, two XML configuration files are provided: "properties1Adult.xml" for *3*-anonymity and "properties2Adult.xml" for *3*-anonymity and *0.25*-closeness.  
 
-For example, to execute the anonymization with "properties1Adult.xml", execute the follow command in the console:
+For example, to perform the anonymization with "properties1Adult.xml", execute the follow command in the console:
 ```
 java -jar -Xmx1024m -Xms1024m ./mAnt.jar ./adultData.txt ./properties1Adult.xml
 ```
 
-Note that, after the anonymization, the application will show several metrics stating the elapsed time, the Sum of Squared Errors (SSE) between the original values and the anonymized ones, and mean and variance divergence for each attribute in the dataset. These latter metrics quantify the information loss resulting from the anonymization, so that the user can have an indication to balance the trade-off between privacy protection and data utility preservation. See an example for the Adult dataset below:
+Note that, after the anonymization, the application will show several metrics specifying the elapsed time, the Sum of Squared Errors (SSE) between the original values and the anonymized ones, and mean and variance divergence for each attribute in the dataset. These latter metrics quantify the information loss resulting from the anonymization, so that the user can have an indication to balance the trade-off between privacy protection and data utility preservation. See an example for the Adult dataset below:
 
 ```
 Anonymization time: 1726 miliSecs
@@ -206,7 +206,7 @@ Variance anonymized dataset attribute 0: 150.31308322169846
 
 ### API
 
-The ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) tool can be executed programmatically via the provided Java API. See bellow an example describing how to anonymize the Adult dataset through API calls
+The ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) tool can be executed programmatically via the provided Java API. See below an example describing how to anonymize the Adult dataset through API calls
 
 ```
 //Dataset location
@@ -236,7 +236,7 @@ A complete example describing the API usage is available in the file "TestApi.ja
 
 ## Authors
 
-Researchers of the [CRISES](https://crises-deim.urv.cat/web/) group of the [Universitat Rovira i Virgili](http://www.urv.cat/en/) in Tarragona (Catalonia, Spain).
+Researchers of the [CRISES](https://crises-deim.urv.cat/web/) group of the [Universitat Rovira i Virgili](http://www.urv.cat/en/) in Tarragona (Catalonia).
 
 ## Resources
 
