@@ -2,6 +2,14 @@
 
 The Microaggregation-based Anonymization Tool (![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT})) is a software package to anonymize datasets using microaggregation algorithms fulfilling *k*-anonymity or *k*-anonymity plus *t*-closeness [[4]](#Resources). ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) has been developed by researchers of the [CRISES](https://crises-deim.urv.cat/web/) group at the [Universitat Rovira i Virgili](http://www.urv.cat/en/) in Tarragona (Catalonia, Spain).
 
+If you find this code useful in your research, please consider citing:
+```
+David Sánchez, Sergio Martínez, Josep Domingo-Ferrer, Jordi Soria-Comas, Montserrat Batet,
+µ-ANT: Semantic Microaggregation-based Anonymization Tool,
+Bioinformatics, 2019. https://doi.org/10.1093/bioinformatics/btz792
+```
+
+
 ## Getting Started
 
 ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) takes as input:
