@@ -9,7 +9,6 @@ David Sánchez, Sergio Martínez, Josep Domingo-Ferrer, Jordi Soria-Comas, Monts
 Bioinformatics, 2019. https://doi.org/10.1093/bioinformatics/btz792
 ```
 
-
 ## Getting Started
 
 ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) takes as input:
@@ -21,7 +20,7 @@ As result, the tool outputs an anonymized version of the dataset and shows sever
 The anonymization application can executed via command line on Windows, Linux and Mac OS X. A JAVA API is also provided that allows the anonymization algorithms to be called programmatically.
 
 ### Prerequisites
-* *The input dataset* is a CSV file where each row corresponds to a record and each column corresponds to an attribute. Within the CSV file, a first line (header) stating the name of the attributes is required in order to map the attributes to features in the configuration file. The software does not currently support missing data points. Hence, preprocessing would be needed to either remove records with missing values or replace missing values by averages. Two sample datasets are provided in the 'datasets' folder. See more details in [examples](#Examples) section.
+* *The input dataset* is a CSV formatted file where each row corresponds to a record and each column corresponds to an attribute. Within the CSV file, a first line (header) stating the name of the attributes is required in order to map the attributes to features in the configuration file. The software does not currently support missing data points. Hence, preprocessing would be needed to either remove records with missing values or replace missing values by averages. Two sample datasets are provided in the 'datasets' folder. See more details in [examples](#Examples) section.
 * *The dataset configuration parameters* are specified in an XML file, so that they can be reused for several datasets that share the same schema (see [Dataset description](#Dataset-description) section).
 * *The protection configuration parameters* set the type of protection applied to each attribute type (see [Protection description](#Protection-description) section).
 
