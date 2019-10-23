@@ -2,13 +2,12 @@
 
 The Microaggregation-based Anonymization Tool (![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT})) is a software package to anonymize datasets using microaggregation algorithms fulfilling *k*-anonymity or *k*-anonymity plus *t*-closeness [[4]](#Resources). ![equation](http://latex.codecogs.com/gif.latex?\dpi{120}&space;\small&space;\mu&space;\textup{ANT}) has been developed by researchers of the [CRISES](https://crises-deim.urv.cat/web/) group at the [Universitat Rovira i Virgili](http://www.urv.cat/en/) in Tarragona (Catalonia, Spain).
 
-If you find this code useful in your research, please consider citing:
+If you find this code useful in your research, please consider citing our paper published in the Bioinformatics journal:
 ```
 David Sánchez, Sergio Martínez, Josep Domingo-Ferrer, Jordi Soria-Comas, Montserrat Batet,
 µ-ANT: Semantic Microaggregation-based Anonymization Tool,
 Bioinformatics, 2019. https://doi.org/10.1093/bioinformatics/btz792
 ```
-
 
 ## Getting Started
 
@@ -21,7 +20,7 @@ As result, the tool outputs an anonymized version of the dataset and shows sever
 The anonymization application can executed via command line on Windows, Linux and Mac OS X. A JAVA API is also provided that allows the anonymization algorithms to be called programmatically.
 
 ### Prerequisites
-* *The input dataset* is a CSV file where each row corresponds to a record and each column corresponds to an attribute. Within the CSV file, a first line (header) stating the name of the attributes is required in order to map the attributes to features in the configuration file. The software does not currently support missing data points. Hence, preprocessing would be needed to either remove records with missing values or replace missing values by averages. Two sample datasets are provided in the 'datasets' folder. See more details in [examples](#Examples) section.
+* *The input dataset* is a CSV formatted file where each row corresponds to a record and each column corresponds to an attribute. Within the CSV file, a first line (header) stating the name of the attributes is required in order to map the attributes to features in the configuration file. The software does not currently support missing data points. Hence, preprocessing would be needed to either remove records with missing values or replace missing values by averages. Two sample datasets are provided in the 'datasets' folder. See more details in [examples](#Examples) section.
 * *The dataset configuration parameters* are specified in an XML file, so that they can be reused for several datasets that share the same schema (see [Dataset description](#Dataset-description) section).
 * *The protection configuration parameters* set the type of protection applied to each attribute type (see [Protection description](#Protection-description) section).
 
